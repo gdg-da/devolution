@@ -328,7 +328,7 @@ export default function DevolutionLanding() {
                 </PCWindow>
             </main>
 
-            <footer className="bg-gray-950 text-[#f5e6d3] py-8 z-20">
+            <footer className="bg-gray-950 text-[#f5e6d3] py-8 z-20 relative">
                 <div className="container mx-auto">
                     <p className='lg:text-center'>&copy; 2025 Dev-o-lution | Organized by GDG on DAIICT campus</p>
                     <div className="flex flex-col lg:flex-row lg:justify-center mt-4 gap-2 z-20">
