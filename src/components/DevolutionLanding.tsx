@@ -203,7 +203,7 @@ export default function DevolutionLanding() {
                         <p className="text-2xl font-bold mb-4">Use our hashtag and win prizes!</p>
                         <div className="flex items-center justify-center space-x-4">
                             <Twitter className="w-8 h-8" />
-                            <span className="text-3xl font-bold">#dev-o-lution</span>
+                            <span className="text-3xl font-bold">#dev_o_lution</span>
                         </div>
                         <p className="mt-4">Share your excitement, ideas, or projects on Twitter using our hashtag for a chance to win amazing prizes!</p>
                     </div>
