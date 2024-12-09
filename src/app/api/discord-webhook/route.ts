@@ -1,17 +1,17 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest, NextResponse } from 'next/server';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    if (req.method === "POST") {
-        const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+export async function POST(req: NextRequest) {
+    const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
 
-        if (!webhookUrl) {
-            return res.status(500).json({ error: "Webhook URL not configured" });
-        }
+    if (!webhookUrl) {
+        return NextResponse.json({ error: "Webhook URL not configured" }, { status: 500 });
+    }
 
-        const payload = {
-            content: `New Submission:\n${JSON.stringify(req.body, null, 2)}`,
-        };
+    const payload = {
+        content: `New Submission:\n${JSON.stringify(await req.json(), null, 2)}`,
+    };
 
+    try {
         const discordResponse = await fetch(webhookUrl, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -19,12 +19,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         });
 
         if (discordResponse.ok) {
-            return res.status(200).json({ message: "Webhook sent successfully" });
+            return NextResponse.json({ message: "Webhook sent successfully" });
         } else {
-            return res.status(500).json({ error: "Failed to send webhook" });
+            return NextResponse.json({ error: "Failed to send webhook" }, { status: 500 });
         }
-    } else {
-        res.setHeader("Allow", ["POST"]);
-        return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
+    } catch (error) {
+        console.error(error);
+        return NextResponse.json({ error: "Error while sending webhook" }, { status: 500 });
     }
+}
+
+export async function GET() {
+    return NextResponse.json({ message: 'GET method is not allowed on this route' }, { status: 405 });
 }
