@@ -131,7 +131,7 @@ export default function DevolutionLanding() {
                 </section>
 
                 <PCWindow title="About Dev-o-lution" className="mb-32">
-                    <p id="about" className="text-lg mb-4">
+                    <p id="about" className="text-base lg:text-lg mb-4">
                         Dev-o-lution is where coding meets creativity, and innovation breaks free from convention.
                         Join us for workshops, talks, and mind-expanding sessions that will revolutionize your dev skills!
                     </p>
@@ -266,7 +266,7 @@ export default function DevolutionLanding() {
                                 className="w-full min-h-[100px] bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a] rounded-md p-2"
                             /> */}
                             <Button type="submit" className="w-full bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] border-2 border-[#1a1a1a] transition-colors shadow-neo hover-lift">
-                                Submit Speaker Proposal
+                                Submit Sponsor Proposal
                             </Button>
                         </form>
                     </div>
