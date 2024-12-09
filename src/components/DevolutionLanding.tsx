@@ -1,6 +1,6 @@
 "use client"
 
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -49,7 +49,7 @@ export default function DevolutionLanding() {
 
     return (
         <div className="min-h-screen bg-[#f5e6d3] font-mono text-[#1a1a1a] overflow-x-hidden scroll-smooth">
-            <div className="zigzag-bg fixed inset-0 z-0 opacity-20"></div>
+            <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
             <header className="sticky top-0 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a]">
                 <nav className="container mx-auto flex justify-between items-center lg:px-16">
                     <div className="flex items-center space-x-2">
@@ -87,8 +87,8 @@ export default function DevolutionLanding() {
                         </Button>
                     </div>
                     <HoverLiftElement>
-                        <Button className="hidden md:block bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
-                            Register Now
+                        <Button onClick={() => handleScroll('speaker-form')} className="hidden md:block bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
+                            Speaker Registration Started!
                         </Button>
                     </HoverLiftElement>
                 </nav>
@@ -111,8 +111,8 @@ export default function DevolutionLanding() {
                                 {item}
                             </button>
                         ))}
-                        <Button className="w-full mt-2 bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
-                            Register Now
+                        <Button onClick={() => handleScroll('speaker-form')} className="w-full mt-2 bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
+                            Speaker Registration Started!
                         </Button>
                     </div>
                 )}
@@ -128,9 +128,6 @@ export default function DevolutionLanding() {
                         text="Where Code Evolves and Innovation Thrives"
                         className="text-xl md:text-2xl mb-8"
                     />
-                    <Button className="bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#4ecdc4] text-lg px-8 py-4 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo pulse-animation">
-                        Join the Evolution
-                    </Button>
                 </section>
 
                 <PCWindow title="About Dev-o-lution" className="mb-32">
@@ -172,33 +169,34 @@ export default function DevolutionLanding() {
                     </div>
                 </PCWindow2>
 
-                <section id="tracks" className="mb-32">
-                    <h2 className="text-4xl font-bold mb-8 retro-text text-[#1a1a1a]">Dev-o-lution Tracks</h2>
-                    <Tabs defaultValue="web3" className="w-full">
-                        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-[#4ecdc4] p-2 border-4 border-[#1a1a1a]">
-                            <TabsTrigger value="web3" className="data-[state=active]:bg-[#ff6b6b] border-2 border-[#1a1a1a] hover-lift">Web3</TabsTrigger>
-                            <TabsTrigger value="ai" className="data-[state=active]:bg-[#ff6b6b] border-2 border-[#1a1a1a] hover-lift">AI/ML</TabsTrigger>
-                            <TabsTrigger value="mobile" className="data-[state=active]:bg-[#ff6b6b] border-2 border-[#1a1a1a] hover-lift">Mobile</TabsTrigger>
-                            <TabsTrigger value="iot" className="data-[state=active]:bg-[#ff6b6b] border-2 border-[#1a1a1a] hover-lift">IoT</TabsTrigger>
-                        </TabsList>
-                        <TabsContent value="web3" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                            <h3 className="text-2xl font-bold mb-4">Web3 & Blockchain</h3>
-                            <p>Explore decentralized applications and the future of the web.</p>
-                        </TabsContent>
-                        <TabsContent value="ai" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                            <h3 className="text-2xl font-bold mb-4">Artificial Intelligence & Machine Learning</h3>
-                            <p>Dive into intelligent systems and algorithms to solve complex problems.</p>
-                        </TabsContent>
-                        <TabsContent value="mobile" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                            <h3 className="text-2xl font-bold mb-4">Mobile Development</h3>
-                            <p>Create innovative mobile applications for iOS and Android platforms.</p>
-                        </TabsContent>
-                        <TabsContent value="iot" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                            <h3 className="text-2xl font-bold mb-4">Internet of Things</h3>
-                            <p>Connect devices and build smart systems for the interconnected world.</p>
-                        </TabsContent>
-                    </Tabs>
-                </section>
+                <PCWindow title="Dev-o-lution Tracks" className="mb-32">
+                    <section id="tracks">
+                        <Tabs defaultValue="web3" className="w-full">
+                            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-[#4ecdc4] p-2 border-4 border-[#1a1a1a]">
+                                <TabsTrigger value="web3" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Web3</TabsTrigger>
+                                <TabsTrigger value="ai" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">AI/ML</TabsTrigger>
+                                <TabsTrigger value="mobile" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Mobile</TabsTrigger>
+                                <TabsTrigger value="iot" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">IoT</TabsTrigger>
+                            </TabsList>
+                            <TabsContent value="web3" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                                <h3 className="text-2xl font-bold mb-4">Web3 & Blockchain</h3>
+                                <p>Explore decentralized applications and the future of the web.</p>
+                            </TabsContent>
+                            <TabsContent value="ai" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                                <h3 className="text-2xl font-bold mb-4">Artificial Intelligence & Machine Learning</h3>
+                                <p>Dive into intelligent systems and algorithms to solve complex problems.</p>
+                            </TabsContent>
+                            <TabsContent value="mobile" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                                <h3 className="text-2xl font-bold mb-4">Mobile Development</h3>
+                                <p>Create innovative mobile applications for iOS and Android platforms.</p>
+                            </TabsContent>
+                            <TabsContent value="iot" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                                <h3 className="text-2xl font-bold mb-4">Internet of Things</h3>
+                                <p>Connect devices and build smart systems for the interconnected world.</p>
+                            </TabsContent>
+                        </Tabs>
+                    </section>
+                </PCWindow>
 
                 <PCWindow title="Join the Conversation" className="mb-32">
                     <div className="text-center">
@@ -248,13 +246,29 @@ export default function DevolutionLanding() {
                     </div>
                 </PCWindow2>
 
-                <PCWindow title="Our Sponsors" className="mb-32">
-                    <div id='sponsors' className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <PCWindow title="Partner with Us" className="mb-32">
+                    {/* <div id='sponsors' className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {['Sponsor1', 'Sponsor2', 'Sponsor3', 'Sponsor4'].map((sponsor, index) => (
                             <FloatingElement key={sponsor} className="flex items-center justify-center bg-[#f5e6d3] p-4 border-2 border-[#1a1a1a]" delay={index * 0.15}>
                                 <Image src={`/placeholder.svg?height=80&width=160`} alt={sponsor} width={160} height={80} className="opacity-70 hover:opacity-100 transition-opacity" />
                             </FloatingElement>
                         ))}
+                    </div> */}
+                    <div id='sponsors'>
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <Input name="name" type="text" placeholder="Name of your Organization" className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]" />
+                            <Input name='contact-person' type='text' placeholder='Contact Person' className='bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]' />
+                            <Input name="email" type="email" placeholder="Organization Email" className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]" />
+                            <Input name='contact-number' type='text' placeholder='Contact Number' className='bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]' />
+                            {/* <textarea
+                                name="description"
+                                placeholder="Brief description of your talk"
+                                className="w-full min-h-[100px] bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a] rounded-md p-2"
+                            /> */}
+                            <Button type="submit" className="w-full bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] border-2 border-[#1a1a1a] transition-colors shadow-neo hover-lift">
+                                Submit Speaker Proposal
+                            </Button>
+                        </form>
                     </div>
                 </PCWindow>
 
@@ -288,8 +302,8 @@ export default function DevolutionLanding() {
                     </div>
                 </PCWindow>
 
-                <PCWindow title="Want to Share Your Knowledge?" className="mb-32">
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                <PCWindow title="Join Us as a Speaker" className="mb-32">
+                    <form id='speaker-form' onSubmit={handleSubmit} className="space-y-4">
                         <Input name="name" type="text" placeholder="Name" className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]" />
                         <Input name="email" type="email" placeholder="Email" className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]" />
                         <Input name="talkTitle" type="text" placeholder="Talk Title" className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]" />
@@ -306,31 +320,22 @@ export default function DevolutionLanding() {
                 <PCWindow title="Contact Us" className="mb-32">
                     <div id='contact' className="text-center">
                         <p className="text-xl mb-4">For any queries, please contact us:</p>
-                        <p className="text-2xl font-bold">Phone: 7041180305</p>
+                        <p className="text-2xl font-bold">Abhishek Abbi: +91 7490070001</p>
+                        <p className="text-2xl font-bold">Jash Shah: +91 7041180305</p>
                         <p className="text-2xl font-bold">Email: dsc@daiict.ac.in</p>
                     </div>
                 </PCWindow>
             </main>
 
-            <footer className="bg-gray-950 text-[#f5e6d3] py-8">
-                <div className="container mx-auto text-center">
-                    <p>&copy; 2025 Dev-o-lution | Organized by GDG on DAIICT campus</p>
-                    <div className="flex justify-center space-x-4 mt-4 z-10">
-                        <Link href="https://github.com/ossdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">
-                            OSS GitHub
-                        </Link>
-                        <Link href="https://github.com/gdg-da" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">
-                            GDG GitHub
-                        </Link>
-                        <Link href="https://www.linkedin.com/company/gdg-on-campus-daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">
-                            LinkedIn
-                        </Link>
-                        <Link href="https://www.instagram.com/gdg.daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">
-                            Instagram
-                        </Link>
-                        <Link href="https://x.com/gdgdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">
-                            X (Twitter)
-                        </Link>
+            <footer className="bg-gray-950 text-[#f5e6d3] py-8 z-20">
+                <div className="container mx-auto">
+                    <p className='lg:text-center'>&copy; 2025 Dev-o-lution | Organized by GDG on DAIICT campus</p>
+                    <div className="flex flex-col lg:flex-row lg:justify-center mt-4 gap-2 z-20">
+                        <Link target='_blank' href="https://github.com/ossdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">OSS-GitHub</Link>
+                        <Link target='_blank' href="https://github.com/gdg-da" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">GDG-GitHub</Link>
+                        <Link target='_blank' href="https://www.linkedin.com/company/gdg-on-campus-daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">LinkedIn</Link>
+                        <Link target='_blank' href="https://www.instagram.com/gdg.daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">Instagram</Link>
+                        <Link target='_blank' href="https://x.com/gdgdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">X (Twitter)</Link>
                     </div>
                 </div>
             </footer>
