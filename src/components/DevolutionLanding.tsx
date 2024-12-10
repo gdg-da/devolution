@@ -263,7 +263,7 @@ export default function DevolutionLanding() {
                             <h3 className="text-2xl font-bold mb-4">Website Design & Development</h3>
                             <ul className="space-y-2">
                                 <li>Aditya Dave</li>
-                                <li>Atik</li>
+                                <li>Atik Vohra</li>
                                 <li>Tirth Patel</li>
                                 <li>Param Savjani</li>
                                 <li>Kalp Chaniyara</li>
@@ -275,9 +275,9 @@ export default function DevolutionLanding() {
                             <h3 className="text-2xl font-bold mb-4">PR & Sponsorship</h3>
                             <ul className="space-y-2">
                                 <li>Neel Khatri</li>
-                                <li>Nisarg</li>
+                                <li>Nisarg Trivedi</li>
                                 <li>Anushree</li>
-                                <li>Anandita</li>
+                                <li>Anandita Saolapurkar</li>
                                 <li>Prakriti Pandey</li>
                             </ul>
                         </div>
@@ -367,13 +367,13 @@ export default function DevolutionLanding() {
 
             <footer className="bg-gray-950 text-[#f5e6d3] py-8 z-20 relative">
                 <div className="container mx-auto">
-                    <p className='lg:text-center'>&copy; 2025 Dev-o-lution | Organized by GDG on DAIICT campus</p>
+                    <p className='lg:text-center'>&copy; 2025 Dev-o-lution | Organized by GDG on Campus DA-IICT</p>
                     <div className="flex flex-col lg:flex-row lg:justify-center mt-4 gap-2 z-20">
-                        <Link target='_blank' href="https://github.com/ossdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">OSS-GitHub</Link>
-                        <Link target='_blank' href="https://github.com/gdg-da" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">GDG-GitHub</Link>
-                        <Link target='_blank' href="https://www.linkedin.com/company/gdg-on-campus-daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">LinkedIn</Link>
-                        <Link target='_blank' href="https://www.instagram.com/gdg.daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">Instagram</Link>
-                        <Link target='_blank' href="https://x.com/gdgdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift">X (Twitter)</Link>
+                        <Link target='_blank' href="https://github.com/ossdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">OSS-GitHub</Link>
+                        <Link target='_blank' href="https://github.com/gdg-da" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">GDG-GitHub</Link>
+                        <Link target='_blank' href="https://www.linkedin.com/company/gdg-on-campus-daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">LinkedIn</Link>
+                        <Link target='_blank' href="https://www.instagram.com/gdg.daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">Instagram</Link>
+                        <Link target='_blank' href="https://x.com/gdgdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">X (Twitter)</Link>
                     </div>
                 </div>
             </footer>
