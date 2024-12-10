@@ -60,7 +60,7 @@ export default function DevolutionLanding() {
                         </RotatingElement>
                         <span className="text-2xl font-bold retro-text">Dev-o-lution</span>
                     </div>
-                    <div className="hidden md:flex space-x-4">
+                    <div className="hidden md:flex space-x-4 md:text-xs lg:text-sm">
                         {[
                             "About",
                             "Timeline",
@@ -83,13 +83,13 @@ export default function DevolutionLanding() {
                     <div className="md:hidden">
                         <Button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="bg-[#1a1a1a] text-[#f5e6d3]"
+                            className="bg-[#1a1a1a] text-[#f5e6d3] "
                         >
                             <Menu />
                         </Button>
                     </div>
                     <HoverLiftElement>
-                        <Button onClick={() => handleScroll('speaker-form')} className="hidden md:block bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
+                        <Button onClick={() => handleScroll('speaker-form')} className="mx-3 md:text-xs  hidden h-15  md:block bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
                             Speaker Registration Started!
                         </Button>
                     </HoverLiftElement>
@@ -367,13 +367,17 @@ export default function DevolutionLanding() {
 
             <footer className="bg-gray-950 text-[#f5e6d3] py-8 z-20 relative">
                 <div className="container mx-auto">
-                    <p className='lg:text-center'>&copy; 2025 Dev-o-lution | Organized by GDG on Campus DA-IICT</p>
-                    <div className="flex flex-col lg:flex-row lg:justify-center mt-4 gap-2 z-20">
-                        <Link target='_blank' href="https://github.com/ossdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">OSS-GitHub</Link>
-                        <Link target='_blank' href="https://github.com/gdg-da" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">GDG-GitHub</Link>
-                        <Link target='_blank' href="https://www.linkedin.com/company/gdg-on-campus-daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">LinkedIn</Link>
-                        <Link target='_blank' href="https://www.instagram.com/gdg.daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">Instagram</Link>
-                        <Link target='_blank' href="https://x.com/gdgdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">X (Twitter)</Link>
+                    <p className='lg:text-center md:text-center'>&copy; 2025 Dev-o-lution | Organized by GDG on Campus DA-IICT</p>
+                    <div className="flex text-center flex-col lg:flex-row lg:justify-center mt-4 gap-2 z-20">
+                        <div className='sm:text-center sm:block flex-col flex gap-1'>
+                            <Link target='_blank' href="https://github.com/ossdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">OSS-GitHub</Link>
+                            <Link target='_blank' href="https://github.com/gdg-da" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">GDG-GitHub</Link>
+                        </div>
+                        <div className='sm:text-center sm:block flex-col flex gap-1'>
+                            <Link target='_blank' href="https://www.linkedin.com/company/gdg-on-campus-daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">LinkedIn</Link>
+                            <Link target='_blank' href="https://www.instagram.com/gdg.daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">Instagram</Link>
+                            <Link target='_blank' href="https://x.com/gdgdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">X(Twitter)</Link>
+                        </div>
                     </div>
                 </div>
             </footer>
