@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Code, Cpu, Calendar, MapPin, Zap, Rocket, Award, Twitter, Menu } from 'lucide-react'
-import { PCWindow, AnimatedBox, FloatingElement, GlitchText, TypewriterText, RotatingElement, HoverLiftElement, PCWindow2 } from './UIComponents'
+import { PCWindow, AnimatedBox, FloatingElement, GlitchText, RotatingElement, HoverLiftElement, PCWindow2 } from './UIComponents'
 import { useState } from 'react'
 import { TypeAnimation } from 'react-type-animation';
 
@@ -161,7 +161,7 @@ export default function DevolutionLanding() {
                         ]}
                         wrapper="span"
                         speed={50}
-                        style={{  display: 'inline-block' }}
+                        style={{ display: 'inline-block' }}
                         repeat={Infinity}
                         className='text-xl md:text-3xl mb-8 myfont'
                     />
