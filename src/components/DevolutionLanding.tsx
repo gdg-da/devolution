@@ -8,6 +8,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Code, Cpu, Calendar, MapPin, Zap, Rocket, Award, Twitter, Menu } from 'lucide-react'
 import { PCWindow, AnimatedBox, FloatingElement, GlitchText, TypewriterText, RotatingElement, HoverLiftElement, PCWindow2 } from './UIComponents'
 import { useState } from 'react'
+import { TypeAnimation } from 'react-type-animation';
+
 
 export default function DevolutionLanding() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -124,9 +126,44 @@ export default function DevolutionLanding() {
                         text="Dev-o-lution"
                         className="text-6xl md:text-8xl font-bold mb-4 retro-text text-[#1a1a1a]"
                     />
-                    <TypewriterText
-                        text="Where Code Evolves and Innovation Thrives"
+                    {/* <TypewriterText
+                        text="Where Code Evolves and Innovation Thrivessss"
                         className="text-xl md:text-2xl mb-8"
+                    /> */}
+
+                    <TypeAnimation
+                        sequence={[
+                            // Same substring at the start will only be typed out once, initially
+                            'Where Technology Evolves',
+                            500, // wait 1s before replacing "Mice" with "Hamsters"
+                            'Where People Evolve',
+                            500,
+                            'Where Ideas Evolve',
+                            500,
+                            'Where Minds Evolve',
+                            500,
+                            // 'Where Code Evolves',
+                            // 500, // wait 1s before replacing "Mice" with "Hamsters"
+                            'Where Code Evolves and Innovation Thrives',
+                            5000,
+                            // 'We produce food for Guinea Pigs',
+                            // 1000,
+                            // 'We produce food for Chinchillas',
+                            // 1000,
+                            // 'Where Code Evolves and Innovation Thrives',
+                            // 1000, // wait 1s before replacing "Mice" with "Hamsters"
+                            // 'We produce food for Hamsters',
+                            // 1000,
+                            // 'We produce food for Guinea Pigs',
+                            // 1000,
+                            // 'We produce food for Chinchillas',
+                            // 1000,
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        style={{  display: 'inline-block' }}
+                        repeat={Infinity}
+                        className='text-xl md:text-3xl mb-8 myfont'
                     />
                 </section>
 

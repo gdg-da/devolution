@@ -3,6 +3,22 @@
 @import 'tailwindcss/utilities';
 
 @font-face {
+    font-family: "Aeonik Medium";
+    src: url("https://db.onlinewebfonts.com/t/757ff6da05e4f945c71c9751b485a9ad.eot");
+    src: url("https://db.onlinewebfonts.com/t/757ff6da05e4f945c71c9751b485a9ad.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/757ff6da05e4f945c71c9751b485a9ad.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/757ff6da05e4f945c71c9751b485a9ad.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/757ff6da05e4f945c71c9751b485a9ad.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/757ff6da05e4f945c71c9751b485a9ad.svg#Aeonik Medium")format("svg");
+  }
+  
+  .myfont {
+    font-family: "Aeonik Medium";
+  }
+
+  
+
+@font-face {
     font-family: 'RetroFont';
     src: url('/path-to-retro-font.woff2') format('woff2');
 }
