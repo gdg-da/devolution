@@ -283,34 +283,34 @@ export default function DevolutionLanding() {
           </div>
         </PCWindow2>
 
-                <PCWindow title="Dev-o-lution Tracks" className="mb-32">
-                    <section id="tracks">
-                        <Tabs defaultValue="web3" className="w-full">
-                            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-[#4ecdc4] p-2 border-4 border-[#1a1a1a] sm:mb-0 mb-[60px]">
-                                <TabsTrigger value="web3" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Web3</TabsTrigger>
-                                <TabsTrigger value="ai" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">AI/ML</TabsTrigger>
-                                <TabsTrigger value="mobile" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Open Source</TabsTrigger>
-                                <TabsTrigger value="iot" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Development</TabsTrigger>
-                            </TabsList>
-                            <TabsContent value="web3" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                                <h3 className="text-2xl font-bold mb-4">Web3 & Blockchain</h3>
-                                <p>Explore decentralized applications and the future of the web.</p>
-                            </TabsContent>
-                            <TabsContent value="ai" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                                <h3 className="text-2xl font-bold mb-4">Artificial Intelligence & Machine Learning</h3>
-                                <p>Dive into intelligent systems and algorithms to solve complex problems.</p>
-                            </TabsContent>
-                            <TabsContent value="mobile" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                                <h3 className="text-2xl font-bold mb-4">Open Source</h3>
-                                <p>Learn how to meaningfully contribute to Open Source Projects.</p>
-                            </TabsContent>
-                            <TabsContent value="iot" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                                <h3 className="text-2xl font-bold mb-4">Development</h3>
-                                <p>Unlock your potential and gain insights from experts to supercharge your development skills.</p>
-                            </TabsContent>
-                        </Tabs>
-                    </section>
-                </PCWindow>
+        <PCWindow title="Dev-o-lution Tracks" className="mb-32">
+            <section id="tracks">
+                <Tabs defaultValue="web3" className="w-full">
+                    <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-[#4ecdc4] p-2 border-4 border-[#1a1a1a] sm:mb-0 mb-[60px]">
+                        <TabsTrigger value="web3" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Web3/Blockchain</TabsTrigger>
+                        <TabsTrigger value="ai" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">AI/ML</TabsTrigger>
+                        <TabsTrigger value="mobile" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Open Source</TabsTrigger>
+                        <TabsTrigger value="iot" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Web/App dev</TabsTrigger>
+                    </TabsList>
+                    <TabsContent value="web3" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                        <h3 className="text-2xl font-bold mb-4">Web3 & Blockchain</h3>
+                        <p>Explore decentralized applications and the future of the web.</p>
+                    </TabsContent>
+                    <TabsContent value="ai" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                        <h3 className="text-2xl font-bold mb-4">Artificial Intelligence & Machine Learning</h3>
+                        <p>Dive into intelligent systems and algorithms to solve complex problems.</p>
+                    </TabsContent>
+                    <TabsContent value="mobile" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                        <h3 className="text-2xl font-bold mb-4">Open Source</h3>
+                        <p>Learn how to meaningfully contribute to Open Source Projects.</p>
+                    </TabsContent>
+                    <TabsContent value="iot" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                        <h3 className="text-2xl font-bold mb-4">Development</h3>
+                        <p>Unlock your potential and gain insights from experts to supercharge your development skills.</p>
+                    </TabsContent>
+                </Tabs>
+            </section>
+        </PCWindow>
 
         <PCWindow title="Join the Conversation" className="mb-32">
           <div className="text-center">
