@@ -73,7 +73,7 @@ export default function DevolutionLanding() {
       <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
       <header className="sticky top-0 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a]">
         <nav className="container mx-auto flex justify-between items-center pr-16">
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center md:space-x-1">
             {/* <RotatingElement className="w-12 h-12 bg-[#4ecdc4] rounded-full flex items-center justify-center border-2 border-[#1a1a1a]">
               <span className="text-2xl font-bold">D</span>
             </RotatingElement>
@@ -81,13 +81,12 @@ export default function DevolutionLanding() {
             <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
               DEV
             </span>
-            <RotatingElement>
-              <img
-                src="./planet.svg"
-                alt="Planet"
-                className="w-8 h-8 md:w-10 md:h-10"
-              />
-            </RotatingElement>
+            <img
+              src="./planet.png"
+              alt="Planet"
+              className="ml-0.5 w-8 h-8 md:w-10 md:h-10 animate-spin"
+              style={{ animation: "spin 10s linear infinite" }}
+            />
             <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
               LUTION
             </span>
@@ -165,13 +164,12 @@ export default function DevolutionLanding() {
               text="DEV"
               className="text-6xl md:text-8xl font-bold retro-text text-[#1a1a1a]"
             />
-            <RotatingElement>
-              <img
-                src="./planet.svg"
-                alt="Planet"
-                className="mx-2 w-16 h-16 md:w-24 md:h-24"
-              />
-            </RotatingElement>
+            <img
+              src="./planet.png"
+              alt="Planet"
+              className="md:mx-2 w-16 h-16 md:w-24 md:h-24 animate-spin"
+              style={{ animation: "spin 10s linear infinite" }}
+            />
             <GlitchText
               text="LUTION"
               className="text-6xl md:text-8xl font-bold retro-text text-[#1a1a1a]"
