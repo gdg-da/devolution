@@ -53,7 +53,7 @@ export default function DevolutionLanding() {
         <div className="min-h-screen bg-[#f5e6d3] font-mono text-[#1a1a1a] overflow-x-hidden scroll-smooth">
             <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
             <header className="sticky top-0 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a]">
-                <nav className="container mx-auto flex justify-between items-center lg:px-16">
+                <nav className="container mx-auto flex justify-between items-center pr-16">
                     <div className="flex items-center space-x-2">
                         <RotatingElement className="w-12 h-12 bg-[#4ecdc4] rounded-full flex items-center justify-center border-2 border-[#1a1a1a]">
                             <span className="text-2xl font-bold">D</span>
@@ -88,7 +88,7 @@ export default function DevolutionLanding() {
                             <Menu />
                         </Button>
                     </div>
-                    <HoverLiftElement>
+                    <HoverLiftElement className='hidden md:block'>
                         <Button onClick={() => handleScroll('speaker-form')} className="mx-3 md:text-xs  hidden h-15  md:block bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
                             Speaker Registration Started!
                         </Button>
