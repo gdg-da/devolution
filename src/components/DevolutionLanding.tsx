@@ -72,7 +72,7 @@ export default function DevolutionLanding() {
             <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
             <header className="sticky top-0 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a]">
                 <nav className="container mx-auto flex justify-between items-center px-16">
-                    <div className="flex items-center md:space-x-1">
+                    <Link href="/" className="flex items-center md:space-x-1">
                         <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
                             DEV
                         </span>
@@ -87,7 +87,7 @@ export default function DevolutionLanding() {
                         <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
                             LUTION
                         </span>
-                    </div>
+                    </Link>
                     <div className="hidden md:flex space-x-4 md:text-xs lg:text-sm">
                         {[
                             "About",
@@ -177,8 +177,6 @@ export default function DevolutionLanding() {
                             "Where People Evolve",
                             500,
                             "Where Ideas Evolve",
-                            500,
-                            "Where Minds Evolve",
                             500,
                             "Where Code Evolves and Innovation Thrives",
                             5000,

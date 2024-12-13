@@ -12,7 +12,7 @@ export default function SpeakerManual() {
             <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
             <header className="sticky top-0 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a]">
                 <nav className="container mx-auto flex justify-between items-center px-16">
-                    <div className="flex items-center md:space-x-1">
+                    <Link href="/" className="flex items-center md:space-x-1">
                         <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
                             DEV
                         </span>
@@ -27,12 +27,7 @@ export default function SpeakerManual() {
                         <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
                             LUTION
                         </span>
-                    </div>
-                    <Button asChild>
-                        <Link href="/" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
-                            Back to Home
-                        </Link>
-                    </Button>
+                    </Link>
                 </nav>
             </header>
             <main className="container mx-auto px-4 py-16 relative z-10 lg:px-16">
@@ -55,9 +50,13 @@ export default function SpeakerManual() {
                             className="text-6xl md:text-8xl font-bold retro-text text-[#1a1a1a]"
                         />
                     </div>
-                    <TypeAnimation 
-                    className="text-xl md:text-3xl mb-8 myfont" 
-                    sequence={["1st Dev-o-lution Conference"]} 
+                    <TypeAnimation
+                        sequence={["Speaker Manual", 500, "Call for Speakers", 500, "Dev-o-lution 2025"]}
+                        wrapper="span"
+                        speed={50}
+                        style={{ display: "inline-block" }}
+                        repeat={0}
+                        className="text-xl md:text-3xl mb-8 myfont"
                     />
                 </section>
                 <PCWindow title="Welcome to Dev-o-lution!" className="mb-16">
