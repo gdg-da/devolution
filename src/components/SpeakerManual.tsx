@@ -3,14 +3,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import { PCWindow, AnimatedBox, GlitchText } from './UIComponents'
-import { TypeAnimation } from 'react-type-animation'
+import { PCWindow, AnimatedBox } from './UIComponents'
 
 export default function SpeakerManual() {
     return (
         <div className="min-h-screen bg-[#f5e6d3] font-mono text-[#1a1a1a] overflow-x-hidden">
             <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
-            <header className="sticky top-0 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a]">
+            <header className="fixed top-0 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
                 <nav className="container mx-auto flex justify-between items-center px-16">
                     <Link href="/" className="flex items-center md:space-x-1">
                         <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
@@ -28,36 +27,18 @@ export default function SpeakerManual() {
                             LUTION
                         </span>
                     </Link>
+                    <Button asChild>
+                        <Link href="/" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
+                            Home
+                        </Link>
+                    </Button>
                 </nav>
             </header>
-            <main className="container mx-auto px-4 py-16 relative z-10 lg:px-16">
-                <section className="text-center mb-32">
-                    <div className="flex justify-center items-center mb-8">
-                        <GlitchText
-                            text="DEV"
-                            className="text-6xl md:text-8xl font-bold retro-text text-[#1a1a1a]"
-                        />
-                        <Image
-                            src="/planet.png"
-                            alt="Planet"
-                            width={96}
-                            height={96}
-                            className="mx-1 w-16 h-16 md:w-24 md:h-24 animate-spin"
-                            style={{ animation: "spin 10s linear infinite" }}
-                        />
-                        <GlitchText
-                            text="LUTION"
-                            className="text-6xl md:text-8xl font-bold retro-text text-[#1a1a1a]"
-                        />
-                    </div>
-                    <TypeAnimation
-                        sequence={["Speaker Manual", 500, "Call for Speakers", 500, "Dev-o-lution 2025"]}
-                        wrapper="span"
-                        speed={50}
-                        style={{ display: "inline-block" }}
-                        repeat={0}
-                        className="text-xl md:text-3xl mb-8 myfont"
-                    />
+            <main className="container mx-auto px-4 py-16 relative z-10 lg:px-16 mt-24">
+                <section className="text-center mb-16">
+                    <h1 className="text-4xl lg:text-6xl font-bold retro-text text-[#1a1a1a]">
+                        We&apos;re looking for speakers
+                    </h1>
                 </section>
                 <PCWindow title="Welcome to Dev-o-lution!" className="mb-16">
                     <p className="text-lg mb-4">

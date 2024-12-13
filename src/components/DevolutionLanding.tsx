@@ -70,7 +70,7 @@ export default function DevolutionLanding() {
     return (
         <div className="min-h-screen bg-[#f5e6d3] font-mono text-[#1a1a1a] overflow-x-hidden scroll-smooth">
             <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
-            <header className="sticky top-0 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a]">
+            <header className="fixed top-0 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
                 <nav className="container mx-auto flex justify-between items-center px-16">
                     <Link href="/" className="flex items-center md:space-x-1">
                         <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
@@ -149,7 +149,7 @@ export default function DevolutionLanding() {
                     </div>
                 )}
             </header>
-            <main className="container mx-auto px-4 py-16 relative z-10 lg:px-16">
+            <main className="container mx-auto px-4 py-16 relative z-10 lg:px-16 mt-24">
                 <section id="about" className="text-center mb-32">
                     <div className="flex justify-center items-center mb-8">
                         <GlitchText
