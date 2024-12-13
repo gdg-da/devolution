@@ -20,7 +20,6 @@
 
 @font-face {
     font-family: 'RetroFont';
-    src: url('/path-to-retro-font.woff2') format('woff2');
 }
 
 body {
