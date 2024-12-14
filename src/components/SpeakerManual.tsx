@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { PCWindow, AnimatedBox } from './UIComponents'
 import SpaceStrip from './ui/spacebutton';
+import NeoBrutalismBenefits from './SpeakerBenefits';
 
 export default function SpeakerManual() {
     return (
@@ -148,7 +149,7 @@ export default function SpeakerManual() {
                         </div>
                     </div>
                 </PCWindow>
-                <PCWindow title="Why Speak at Dev-o-lution?" className="mb-16">
+                {/* <PCWindow title="Why Speak at Dev-o-lution?" className="mb-16">
                     <div className="space-y-4">
                         <AnimatedBox className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a]">
                             <h3 className="text-xl font-bold mb-2">1️⃣ Advance Your Career</h3>
@@ -163,16 +164,12 @@ export default function SpeakerManual() {
                             <p>Engage with other speakers and top experts in the industry.</p>
                         </AnimatedBox>
                     </div>
+                </PCWindow> */}
+                <PCWindow title="" className="mb-16">
+                <NeoBrutalismBenefits/>
                 </PCWindow>
-                <PCWindow title="Speaker Perks" className="mb-16">
-                    <ul className="list-disc list-inside space-y-2">
-                        <li>Full-day access to the conference.</li>
-                        <li>Networking opportunities with 500+ developers and technologists.</li>
-                        <li>Social media exposure through GDG on Campus DA-IICT&apos;s official platforms.</li>
-                        <li>Assistance from the GDG on Campus DA-IICT team in preparing your talk.</li>
-                    </ul>
-                </PCWindow>
-                <PCWindow title="Key Dates" className="mb-16">
+                
+                {/* <PCWindow title="Key Dates" className="mb-16">
                     <p className="text-xl font-bold">Call for Speakers Deadline: December 31, 2024</p>
                 </PCWindow>
                 <PCWindow title="Contact Us" className="mb-16">
@@ -182,12 +179,19 @@ export default function SpeakerManual() {
                     <p className="text-lg font-bold">
                         We look forward to hearing from you and hosting an incredible event together!
                     </p>
-                </PCWindow>
-                <PCWindow title="Submit Speaker Proposal" className="mb-16">
+                </PCWindow> */}
+                <PCWindow title="" className="mb-16">
                     <div className="bg-[#4ecdc4] p-8 border-4 border-[#1a1a1a] shadow-neo">
-                        <h2 className="text-3xl font-bold mb-4 retro-text text-center">Ready to Share Your Expertise?</h2>
+                        <h1 className="text-3xl font-bold mb-4 retro-text text-center">Ready to Share Your Expertise?</h1>
                         <p className="text-lg mb-6 text-center">
-                            Take the first step towards being a part of Dev-o-lution! Submit your speaker proposal and join us in shaping the future of technology.
+                            <span className='font-bold'>Take the first step towards being a part of Dev-o-lution!</span>
+                            <br/> 
+                            Call for speakers will be open until December 31, 2024 at 11:59 p.m. PT. We will start notifying speakers of their submission status in January 2025.
+                            <br/> <br/>
+
+                            <span className='text-sm'>Reach out to dsc@daiict.ac.in with any questions.</span>
+
+
                         </p>
                         <div className="text-center">
                             <Button asChild className="bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] text-2xl px-12 py-6 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
