@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import { PCWindow, AnimatedBox } from './UIComponents'
+import { PCWindow, AnimatedBox, PCWindow2 } from './UIComponents'
 import SpaceStrip from './ui/spacebutton';
 import NeoBrutalismBenefits from './SpeakerBenefits';
 
@@ -11,27 +11,16 @@ export default function SpeakerManual() {
     return (
         <div className="min-h-screen bg-[#f5e6d3] font-mono text-[#1a1a1a] overflow-x-hidden">
             <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
-            <SpaceStrip/>
+            <SpaceStrip />
             <header className="fixed top-7 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
                 <nav className="container mx-auto flex justify-between items-center px-16">
                     <Link href="/" className="flex items-center md:space-x-1">
-                        <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
-                            DEV
-                        </span>
-                        <Image
-                            src="/planet.png"
-                            alt="Planet"
-                            width={40}
-                            height={40}
-                            className="ml-0.5 w-8 h-8 md:w-10 md:h-10 animate-spin"
-                            style={{ animation: "spin 10s linear infinite" }}
-                        />
-                        <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
-                            LUTION
-                        </span>
+                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">DEV</span>
+                        <Image src="/planet.png" alt="Planet" width={40} height={40} className="ml-0.5 w-6 h-6 md:w-9 md:h-9 animate-spin" style={{ animation: "spin 10s linear infinite" }} />
+                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">LUTION</span>
                     </Link>
                     <Button asChild>
-                        <Link href="/" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
+                        <Link href="/" className=" bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border hover:border-2 border-slate-200 hover:border-[#1a1a1a]">
                             Home
                         </Link>
                     </Button>
@@ -48,7 +37,7 @@ export default function SpeakerManual() {
                         We are thrilled to announce the <strong>Call for Speakers (CFP)</strong> for our inaugural event. If you are passionate about your work and want to share your experiences with one of the largest tech audiences in Gandhinagar, you&apos;ve come to the right place.
                     </p>
                 </PCWindow>
-                <PCWindow title="Target Audience" className="mb-16">
+                <PCWindow2 title="Target Audience" className="mb-16">
                     <p className="mb-4">Our primary audience consists of <strong>college students and budding technologists</strong> eager to learn and explore new technologies. This includes:</p>
                     <ul className="list-disc list-inside space-y-2">
                         <li>Web, Mobile, and Backend Developers</li>
@@ -58,7 +47,7 @@ export default function SpeakerManual() {
                         <li>Entrepreneurs</li>
                         <li>Startup Ecosystem Enablers</li>
                     </ul>
-                </PCWindow>
+                </PCWindow2>
                 <PCWindow title="Session Formats" className="mb-16">
                     <div className="space-y-4">
                         <AnimatedBox className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a]">
@@ -71,7 +60,7 @@ export default function SpeakerManual() {
                         </AnimatedBox>
                     </div>
                 </PCWindow>
-                <PCWindow title="Suggested Topics" className="mb-16">
+                <PCWindow2 title="Suggested Topics" className="mb-16">
                     <div className="space-y-8">
                         {[
                             {
@@ -128,7 +117,7 @@ export default function SpeakerManual() {
                             </div>
                         ))}
                     </div>
-                </PCWindow>
+                </PCWindow2>
                 <PCWindow title="Guidelines for CFP Submission" className="mb-16">
                     <div className="space-y-8">
                         <div>
@@ -149,49 +138,18 @@ export default function SpeakerManual() {
                         </div>
                     </div>
                 </PCWindow>
-                {/* <PCWindow title="Why Speak at Dev-o-lution?" className="mb-16">
-                    <div className="space-y-4">
-                        <AnimatedBox className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a]">
-                            <h3 className="text-xl font-bold mb-2">1️⃣ Advance Your Career</h3>
-                            <p>Showcase your expertise to potential collaborators, employers, or business partners.</p>
-                        </AnimatedBox>
-                        <AnimatedBox className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a]">
-                            <h3 className="text-xl font-bold mb-2">2️⃣ Represent Your Organization</h3>
-                            <p>Add credibility to your company&apos;s public image through your presentation.</p>
-                        </AnimatedBox>
-                        <AnimatedBox className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a]">
-                            <h3 className="text-xl font-bold mb-2">3️⃣ Exclusive Networking Opportunities</h3>
-                            <p>Engage with other speakers and top experts in the industry.</p>
-                        </AnimatedBox>
-                    </div>
-                </PCWindow> */}
-                <PCWindow title="" className="mb-16">
-                <NeoBrutalismBenefits/>
-                </PCWindow>
-                
-                {/* <PCWindow title="Key Dates" className="mb-16">
-                    <p className="text-xl font-bold">Call for Speakers Deadline: December 31, 2024</p>
-                </PCWindow>
-                <PCWindow title="Contact Us" className="mb-16">
-                    <p className="text-lg mb-4">
-                        For any questions or further clarifications, feel free to reach out to us at <a href="mailto:dsc@daiict.ac.in" className="text-[#ff6b6b] hover:underline">dsc@daiict.ac.in</a>.
-                    </p>
-                    <p className="text-lg font-bold">
-                        We look forward to hearing from you and hosting an incredible event together!
-                    </p>
-                </PCWindow> */}
+                <PCWindow2 title="" className="mb-16">
+                    <NeoBrutalismBenefits />
+                </PCWindow2>
                 <PCWindow title="" className="mb-16">
                     <div className="bg-[#4ecdc4] p-8 border-4 border-[#1a1a1a] shadow-neo">
                         <h1 className="text-3xl font-bold mb-4 retro-text text-center">Ready to Share Your Expertise?</h1>
                         <p className="text-lg mb-6 text-center">
                             <span className='font-bold'>Take the first step towards being a part of Dev-o-lution!</span>
-                            <br/> 
+                            <br />
                             Call for speakers will be open until December 31, 2024 at 11:59 p.m. PT. We will start notifying speakers of their submission status in January 2025.
-                            <br/> <br/>
-
+                            <br /> <br />
                             <span className='text-sm'>Reach out to dsc@daiict.ac.in with any questions.</span>
-
-
                         </p>
                         <div className="text-center">
                             <Button asChild className="bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] text-2xl px-12 py-6 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
@@ -215,38 +173,13 @@ export default function SpeakerManual() {
                     </p>
                     <div className="flex text-center flex-col lg:flex-row lg:justify-center mt-4 gap-2 z-20">
                         <div className="sm:text-center sm:block flex-col flex gap-1">
-                            <Link
-                                target="_blank"
-                                href="https://github.com/ossdaiict"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                OSS-GitHub
-                            </Link>
-                            <Link
-                                target="_blank"
-                                href="https://github.com/gdg-da"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                GDG-GitHub
-                            </Link>
-                        </div>
-                        <div className="sm:text-center sm:block flex-col flex gap-1">
-                            <Link
-                                target="_blank"
-                                href="https://www.linkedin.com/company/gdg-on-campus-daiict/"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                LinkedIn
-                            </Link>
-                            <Link
-                                target="_blank"
-                                href="https://www.instagram.com/gdg.daiict/"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                Instagram
-                            </Link>
-                            <Link
-                                target="_blank"
-                                href="https://x.com/gdgdaiict"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                X(Twitter)
-                            </Link>
+                            <Link target="_blank" href="https://github.com/ossdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">OSS-GitHub</Link>
+                            <Link target="_blank" href="https://github.com/gdg-da" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">GDG-GitHub</Link>
+                            <Link target="_blank" href="https://www.linkedin.com/company/gdg-on-campus-daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">LinkedIn</Link>
+                            <Link target="_blank" href="https://www.instagram.com/gdg.daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">Instagram</Link>
+                            <Link target="_blank" href="https://x.com/gdgdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">X(Twitter)</Link>
+                            <Link target="_blank" href="https://slop.dscdaiict.in/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">SLoP</Link>
+                            <Link target="_blank" href="https://dscdaiict.in/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">GDG on Campus DA-IICT</Link>
                         </div>
                     </div>
                 </div>
