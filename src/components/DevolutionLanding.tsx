@@ -487,8 +487,6 @@ export default function DevolutionLanding() {
                                 className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
                                 GDG-GitHub
                             </Link>
-                        </div>
-                        <div className="sm:text-center sm:block flex-col flex gap-1">
                             <Link
                                 target="_blank"
                                 href="https://www.linkedin.com/company/gdg-on-campus-daiict/"
@@ -506,6 +504,18 @@ export default function DevolutionLanding() {
                                 href="https://x.com/gdgdaiict"
                                 className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
                                 X(Twitter)
+                            </Link>
+                            <Link
+                                target="_blank"
+                                href="https://slop.dscdaiict.in/"
+                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
+                                SLoP
+                            </Link>
+                            <Link
+                                target="_blank"
+                                href="https://dscdaiict.in/"
+                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
+                                GDG on Campus DA-IICT
                             </Link>
                         </div>
                     </div>
