@@ -188,8 +188,8 @@ export default function SpeakerManual() {
                             Take the first step towards being a part of Dev-o-lution! Submit your speaker proposal and join us in shaping the future of technology.
                         </p>
                         <div className="text-center">
-                            <Button asChild className="bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] text-2xl px-12 py-6 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
-                                <a href="https://forms.gle/da1VpuiYiZoB5rLB6" target="_blank" rel="noopener noreferrer">
+                            <Button asChild className="bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] md:text-2xl px-2px sm:px-12 py-6 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
+                                <a href="https://forms.gle/da1VpuiYiZoB5rLB6" className='sm:text-xl text-lg ' target="_blank" rel="noopener noreferrer" >
                                     Submit Your Proposal Now
                                 </a>
                             </Button>

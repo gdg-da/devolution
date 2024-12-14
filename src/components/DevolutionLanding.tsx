@@ -15,6 +15,7 @@ import {
     Award,
     Twitter,
     Menu,
+    X,
 } from "lucide-react";
 import {
     PCWindow,
@@ -111,8 +112,8 @@ export default function DevolutionLanding() {
                     <div className="md:hidden">
                         <Button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="bg-[#1a1a1a] text-[#f5e6d3] ">
-                            <Menu />
+                            className="bg-[#1a1a1a]  text-[#f5e6d3] ">
+                            {mobileMenuOpen ? <X /> : <Menu />}
                         </Button>
                     </div>
                     <HoverLiftElement className="hidden md:block">
