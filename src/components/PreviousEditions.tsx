@@ -33,7 +33,7 @@ export default function PreviousEditions() {
         </Link>
           <Button asChild>
             <Link href="/" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
-              Back to Home
+              Home
             </Link>
           </Button>
         </nav>
@@ -156,7 +156,7 @@ export default function PreviousEditions() {
           <>
             <PCWindow title="GDG DA-IICT DevFest16 Report" className="mb-16">
             <div className="mb-6">
-            <Button asChild className="bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#ff6b6b] text-lg px-8 py-4 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
+            <Button asChild className="bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#ff6b6b] text-lg px-8 py-6 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
                 <Link target="_blank" href="https://ankit-m.github.io/gdgdaiict-website/">DevFest 2016 website</Link>
             </Button>
             </div>
