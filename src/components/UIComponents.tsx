@@ -20,6 +20,11 @@ export const PCWindow: React.FC<PCWindowProps> = ({ title, className, children }
     )
 }
 
+interface AnimatedBoxProps {
+    className?: string;
+    children: React.ReactNode;
+}
+
 export const PCWindow2: React.FC<PCWindowProps> = ({ title, className, children }) => {
     return (
         <div className={`pc-window bg-[#FF6B6B] p-8 border-4 border-[#1a1a1a] neo-box ${className}`}>

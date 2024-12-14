@@ -128,9 +128,16 @@ export default function DevolutionLanding() {
                             </Link>
                         </Button>
                     </HoverLiftElement>
+                    <HoverLiftElement className="hidden md:block">
+                    <Button asChild>
+                            <Link href="/previous-editions" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
+                                Previous Editions
+                            </Link>
+                        </Button>
+                    </HoverLiftElement>
                 </nav>
                 {mobileMenuOpen && (
-                    <div className="md:hidden bg-[#ff6b6b] border-t-2 border-[#1a1a1a] py-2">
+                    <div className="md:hidden bg-[#ff6b6b] border-t-2 border-[#1a1a1a] py-2 mt-4">
                         {[
                             "About",
                             "Timeline",
@@ -147,11 +154,18 @@ export default function DevolutionLanding() {
                                 {item}
                             </button>
                         ))}
+                        <div className="flex justify-between">
                         <Button asChild>
                             <Link href="/speaker-manual" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
                                 Speaker Manual
                             </Link>
                         </Button>
+                        <Button asChild>
+                            <Link href="/previous-editions" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
+                                Previous Editions
+                            </Link>
+                        </Button>
+                        </div>
                     </div>
                 )}
             </header>
@@ -223,7 +237,7 @@ export default function DevolutionLanding() {
                         speed={30}
                         style={{ display: "inline-block" }}
                         repeat={Infinity}
-                        className="text-base md:text-2xl mb-8 myfont font-normal italic bg-yellow-200/85"
+                        className="text-base md:text-2xl mb-8 myfont font-normal bold"
                     />
                 </section>
                 <PCWindow title="About Dev-o-lution" className="mb-32">
@@ -455,11 +469,11 @@ export default function DevolutionLanding() {
                             Registration for Dev-o-lution are coming soon!
                         </p>
 
-                        <Button asChild className="bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#ff6b6b] text-lg px-8 py-4 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
+                        <Button asChild className="bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#ff6b6b] text-lg px-8 py-6 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
                             <Link
                                 target="_blank"
                                 href="https://unstop.com/p/dev-o-lution-google-developer-group-on-campus-daiict-1285732"
-                                className="text-[#000000] transition-colors hover-lift p-2">
+                                className="text-[#000000] transition-colors hover-lift p-4">
                                 Dev-o-lution on Unstop
                             </Link>
                         </Button>
