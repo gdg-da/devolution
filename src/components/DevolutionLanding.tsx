@@ -5,27 +5,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-    Code,
-    Cpu,
-    Calendar,
-    MapPin,
-    Zap,
-    Rocket,
-    Award,
-    Twitter,
-    Menu,
-    MapPinned,
-    CalendarClockIcon,
-} from "lucide-react";
-import {
-    PCWindow,
-    AnimatedBox,
-    FloatingElement,
-    GlitchText,
-    HoverLiftElement,
-    PCWindow2,
-} from "./UIComponents";
+import { Code, Cpu, Calendar, MapPin, Zap, Rocket, Award, Twitter, Menu, MapPinned, CalendarClockIcon, } from "lucide-react";
+import { PCWindow, AnimatedBox, FloatingElement, GlitchText, HoverLiftElement, PCWindow2, } from "./UIComponents";
 import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import SpaceButton from "./ui/spacebutton";
@@ -74,25 +55,12 @@ export default function DevolutionLanding() {
         <div className="min-h-screen bg-[#f5e6d3] font-mono text-[#1a1a1a] overflow-x-hidden scroll-smooth">
             <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
             <SpaceButton />
-
             <header className="fixed top-7 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
-
                 <nav className="container mx-auto flex justify-between items-center px-16">
                     <Link href="/" className="flex items-center md:space-x-1">
-                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">
-                            DEV
-                        </span>
-                        <Image
-                            src="/planet.png"
-                            alt="Planet"
-                            width={40}
-                            height={40}
-                            className="ml-0.5 w-6 h-6 md:w-9 md:h-9 animate-spin"
-                            style={{ animation: "spin 10s linear infinite" }}
-                        />
-                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">
-                            LUTION
-                        </span>
+                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">DEV</span>
+                        <Image src="/planet.png" alt="Planet" width={40} height={40} className="ml-0.5 w-6 h-6 md:w-9 md:h-9 animate-spin" style={{ animation: "spin 10s linear infinite" }} />
+                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">LUTION</span>
                     </Link>
                     <div className="hidden md:flex space-x-4 md:text-xs lg:text-sm">
                         {[
@@ -104,20 +72,12 @@ export default function DevolutionLanding() {
                             "FAQs",
                             "Contact",
                         ].map((item) => (
-                            <HoverLiftElement key={item}>
-                                <button
-                                    onClick={() => handleScroll(item.toLowerCase())}
-                                    className="hover:underline">
-                                    {item}
-                                </button>
-                            </HoverLiftElement>
+                            <HoverLiftElement key={item}><button onClick={() => handleScroll(item.toLowerCase())} className="hover:underline">{item}</button></HoverLiftElement>
                         ))
                         }
                     </div>
                     <div className="md:hidden">
-                        <Button
-                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="bg-[#1a1a1a] text-[#f5e6d3] ">
+                        <Button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="bg-[#1a1a1a] text-[#f5e6d3] ">
                             <Menu />
                         </Button>
                     </div>
@@ -156,66 +116,33 @@ export default function DevolutionLanding() {
                 )}
             </header>
             <main className="container mx-auto px-4 py-16 relative z-10 lg:px-16 mt-24">
-
-
                 <section id="about" className="text-center mb-32">
-
                     <div className=" flex justify-center items-center font-bold mb-4 md:mb-8 ">
-                        <Image
-                            src='/gdg-horizontal.svg'
-                            width={300}
-                            height={1000}
-                            alt="gdg"
-                            className="w-52 sm:w-64 md:w-80 lg:w-96"
-                        />
+                        <Image src='/gdg-horizontal.svg' width={300} height={1000} alt="gdg" className="w-52 sm:w-64 md:w-80 lg:w-96" />
                     </div>
-
-
                     <div className="flex justify-center items-center mb-8">
-
-
-                        <GlitchText
-                            text="DEV"
-                            className="text-6xl md:text-8xl font-bold  text-[#1a1a1a]"
-                        />
-                        <Image
-                            src="/planet.png"
-                            alt="Planet"
-                            width={96}
-                            height={96}
-                            className="mx-1 w-16 h-16 md:w-24 md:h-24 animate-spin"
-                            style={{ animation: "spin 10s linear infinite" }}
-                        />
-                        <GlitchText
-                            text="LUTION"
-                            className="text-6xl md:text-8xl font-bold  text-[#1a1a1a]"
-                        />
+                        <GlitchText text="DEV" className="text-6xl md:text-8xl font-bold  text-[#1a1a1a]" />
+                        <Image src="/planet.png" alt="Planet" width={96} height={96} className="mx-1 w-16 h-16 md:w-24 md:h-24 animate-spin" style={{ animation: "spin 10s linear infinite" }} />
+                        <GlitchText text="LUTION" className="text-6xl md:text-8xl font-bold  text-[#1a1a1a]" />
                     </div>
-
                     <div className="flex flex-col gap-5 ">
                         <div className="text-xl md:text-4xl flex gap-2 md:gap-5   justify-center items-center rampartfont font-bold  ">
                             <CalendarClockIcon className="h-[22px] md:h-[36px]  " height={36} width={36} />  19th January 2025
                         </div>
-
                         <div className="text-lg md:text-3xl flex  gap-5 justify-center items-center rampartfont font-bold mb-8 ">
                             <MapPinned className="h-[18px] md:h-[30px] " height={30} width={30} /> DA-IICT Gandhinagar
                         </div>
-
                     </div>
-
                     <TypeAnimation
                         sequence={[
-                            // Same substring at the start will only be typed out once, initially
                             "Where Code Evolves and Innovation Grows",
                             1500,
                             "Where Code Evolves and Innovation Leads",
                             1500,
-                            
                             "Where Code Evolves and Innovation Ignites",
                             1500,
                             "Where Code Evolves and Innovation Shines",
                             1500,
-
                             "Where Code Evolves and Innovation Thrives",
                             5000,
                         ]}
@@ -315,7 +242,7 @@ export default function DevolutionLanding() {
                         </Tabs>
                     </section>
                 </PCWindow>
-                <PCWindow title="Join the Conversation" className="mb-32">
+                <PCWindow2 title="Join the Conversation" className="mb-32">
                     <div className="text-center">
                         <p className="text-2xl font-bold mb-4">
                             Use our hashtag and win prizes!
@@ -329,8 +256,8 @@ export default function DevolutionLanding() {
                             hashtag for a chance to win amazing prizes!
                         </p>
                     </div>
-                </PCWindow>
-                <PCWindow2 title="Our Team" className="mb-32">
+                </PCWindow2>
+                <PCWindow title="Our Team" className="mb-32">
                     <div id="team" className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="space-y-4">
                             <h3 className="text-2xl font-bold mb-4">Core Team</h3>
@@ -368,15 +295,8 @@ export default function DevolutionLanding() {
                             </ul>
                         </div>
                     </div>
-                </PCWindow2>
-                <PCWindow title="Partner with Us" className="mb-32">
-                    {/* <div id='sponsors' className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        {['Sponsor1', 'Sponsor2', 'Sponsor3', 'Sponsor4'].map((sponsor, index) => (
-                            <FloatingElement key={sponsor} className="flex items-center justify-center bg-[#f5e6d3] p-4 border-2 border-[#1a1a1a]" delay={index * 0.15}>
-                                <Image src={`/placeholder.svg?height=80&width=160`} alt={sponsor} width={160} height={80} className="opacity-70 hover:opacity-100 transition-opacity" />
-                            </FloatingElement>
-                        ))}
-                    </div> */}
+                </PCWindow>
+                <PCWindow2 title="Partner with Us" className="mb-32">
                     <div id="sponsors">
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <Input
@@ -403,20 +323,15 @@ export default function DevolutionLanding() {
                                 placeholder="Contact Number"
                                 className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]"
                             />
-                            {/* <textarea
-                                name="description"
-                                placeholder="Brief description of your talk"
-                                className="w-full min-h-[100px] bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a] rounded-md p-2"
-                            /> */}
                             <Button
                                 type="submit"
-                                className="w-full bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] border-2 border-[#1a1a1a] transition-colors shadow-neo hover-lift">
+                                className="w-full bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] border-2 border-[#1a1a1a] transition-colors shadow-neo hover-lift">
                                 Submit Sponsor Proposal
                             </Button>
                         </form>
                     </div>
-                </PCWindow>
-                <PCWindow2 title="Frequently Asked Questions" className="mb-32">
+                </PCWindow2>
+                <PCWindow title="Frequently Asked Questions" className="mb-32">
                     <div id="faqs" className="space-y-8">
                         {[
                             {
@@ -435,26 +350,18 @@ export default function DevolutionLanding() {
                         ].map(({ q, a }, index) => (
                             <AnimatedBox
                                 key={index}
-                                className="bg-[#4ecdc4] p-4 border-2 border-[#1a1a1a]">
+                                className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a]">
                                 <h3 className="text-xl font-bold mb-2 text-[#1a1a1a]">{q}</h3>
                                 <p>{a}</p>
                             </AnimatedBox>
                         ))}
                     </div>
-                </PCWindow2>
-                <PCWindow title="Ready to Evolve?" className="mb-32">
-                    {/* <form className="space-y-4">
-                        <Input type="text" placeholder="Name" className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]" />
-                        <Input type="email" placeholder="Email" className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]" />
-                        <Button type="submit" className="w-full bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] border-2 border-[#1a1a1a] transition-colors shadow-neo hover-lift">
-                            Register for Dev-o-lution
-                        </Button>
-                    </form> */}
+                </PCWindow>
+                <PCWindow2 title="Ready to Evolve?" className="mb-32">
                     <div className="text-center">
                         <p className="text-xl mb-4">
                             Registration for Dev-o-lution are coming soon!
                         </p>
-
                         <Button asChild className="bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#ff6b6b] text-lg px-8 py-4 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
                             <Link
                                 target="_blank"
@@ -465,7 +372,7 @@ export default function DevolutionLanding() {
                         </Button>
                         <p className="text-2xl font-bold pt-6">See you at the event!</p>
                     </div>
-                </PCWindow>
+                </PCWindow2>
                 <PCWindow title="Join Us as a Speaker" className="mb-32">
                     <p className="text-center mb-4">
                         Share your knowledge and inspire the next generation of developers! Submit your talk proposal today.
@@ -475,45 +382,15 @@ export default function DevolutionLanding() {
                             <Link href="/speaker-manual">Speaker Manual</Link>
                         </Button>
                     </div>
-                    {/* <form id="speaker-form" onSubmit={handleSubmit} className="space-y-4">
-                        <Input
-                            name="name"
-                            type="text"
-                            placeholder="Name"
-                            className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]"
-                        />
-                        <Input
-                            name="email"
-                            type="email"
-                            placeholder="Email"
-                            className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]"
-                        />
-                        <Input
-                            name="talkTitle"
-                            type="text"
-                            placeholder="Talk Title"
-                            className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]"
-                        />
-                        <textarea
-                            name="description"
-                            placeholder="Brief description of your talk"
-                            className="w-full min-h-[100px] bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a] rounded-md p-2"
-                        />
-                        <Button
-                            type="submit"
-                            className="w-full bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] border-2 border-[#1a1a1a] transition-colors shadow-neo hover-lift">
-                            Submit Speaker Proposal
-                        </Button>
-                    </form> */}
                 </PCWindow>
-                <PCWindow title="Contact Us" className="mb-32">
+                <PCWindow2 title="Contact Us" className="mb-32">
                     <div id="contact" className="text-center">
                         <p className="text-xl mb-4">For any queries, please contact us:</p>
                         <p className="text-2xl font-bold">Abhishek Abbi: +91 7490070001</p>
                         <p className="text-2xl font-bold">Jash Shah: +91 7041180305</p>
                         <p className="text-2xl font-bold">Email: dsc@daiict.ac.in</p>
                     </div>
-                </PCWindow>
+                </PCWindow2>
             </main>
             <footer className="bg-gray-950 text-[#f5e6d3] py-8 z-20 relative">
                 <div className="container mx-auto">
@@ -522,48 +399,13 @@ export default function DevolutionLanding() {
                     </p>
                     <div className="flex text-center flex-col lg:flex-row lg:justify-center mt-4 gap-2 z-20">
                         <div className="sm:text-center sm:block flex-col flex gap-1">
-                            <Link
-                                target="_blank"
-                                href="https://github.com/ossdaiict"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                OSS-GitHub
-                            </Link>
-                            <Link
-                                target="_blank"
-                                href="https://github.com/gdg-da"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                GDG-GitHub
-                            </Link>
-                            <Link
-                                target="_blank"
-                                href="https://www.linkedin.com/company/gdg-on-campus-daiict/"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                LinkedIn
-                            </Link>
-                            <Link
-                                target="_blank"
-                                href="https://www.instagram.com/gdg.daiict/"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                Instagram
-                            </Link>
-                            <Link
-                                target="_blank"
-                                href="https://x.com/gdgdaiict"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                X(Twitter)
-                            </Link>
-                            <Link
-                                target="_blank"
-                                href="https://slop.dscdaiict.in/"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                SLoP
-                            </Link>
-                            <Link
-                                target="_blank"
-                                href="https://dscdaiict.in/"
-                                className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">
-                                GDG on Campus DA-IICT
-                            </Link>
+                            <Link target="_blank" href="https://github.com/ossdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">OSS-GitHub</Link>
+                            <Link target="_blank" href="https://github.com/gdg-da" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">GDG-GitHub</Link>
+                            <Link target="_blank" href="https://www.linkedin.com/company/gdg-on-campus-daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">LinkedIn</Link>
+                            <Link target="_blank" href="https://www.instagram.com/gdg.daiict/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">Instagram</Link>
+                            <Link target="_blank" href="https://x.com/gdgdaiict" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">X(Twitter)</Link>
+                            <Link target="_blank" href="https://slop.dscdaiict.in/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">SLoP</Link>
+                            <Link target="_blank" href="https://dscdaiict.in/" className="text-[#4ecdc4] hover:text-[#ff6b6b] transition-colors hover-lift p-2">GDG on Campus DA-IICT</Link>
                         </div>
                     </div>
                 </div>
