@@ -166,8 +166,8 @@ export default function SpeakerManual() {
                     <ul className="list-disc list-inside space-y-2">
                         <li>Full-day access to the conference.</li>
                         <li>Networking opportunities with 500+ developers and technologists.</li>
-                        <li>Social media exposure through GDG Ahmedabad&apos;s official platforms.</li>
-                        <li>Assistance from the GDG Ahmedabad team in preparing your talk.</li>
+                        <li>Social media exposure through GDG on Campus DA-IICT&apos;s official platforms.</li>
+                        <li>Assistance from the GDG on Campus DA-IICT team in preparing your talk.</li>
                     </ul>
                 </PCWindow>
                 <PCWindow title="Key Dates" className="mb-16">
