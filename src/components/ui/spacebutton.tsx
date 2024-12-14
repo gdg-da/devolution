@@ -1,4 +1,4 @@
-import { ArrowRightFromLineIcon, ArrowRightToLine } from 'lucide-react';
+import { ArrowRightFromLineIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
