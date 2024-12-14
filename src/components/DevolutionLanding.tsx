@@ -281,7 +281,7 @@ export default function DevolutionLanding() {
                                 <li>Param Savjani</li>
                                 <li>Kalp Chaniyara</li>
                                 <li>Agrim Sharma</li>
-                                <li>Hritik Patel</li>
+                                <li>Hrithik Patel</li>
                             </ul>
                         </div>
                         <div className="space-y-4">
