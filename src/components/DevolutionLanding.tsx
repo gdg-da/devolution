@@ -416,7 +416,16 @@ export default function DevolutionLanding() {
                         <p className="text-xl mb-4">
                             Registration for Dev-o-lution are coming soon!
                         </p>
-                        <p className="text-2xl font-bold">See you at the event!</p>
+                        
+                        <Button asChild className="bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#ff6b6b] text-lg px-8 py-4 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
+                        <Link
+                            target="_blank"
+                            href="https://unstop.com/p/dev-o-lution-google-developer-group-on-campus-daiict-1285732"
+                            className="text-[#000000] transition-colors hover-lift p-2">
+                            Dev-o-lution on Unstop
+                        </Link>
+                        </Button>
+                        <p className="text-2xl font-bold pt-6">See you at the event!</p>
                     </div>
                 </PCWindow>
                 <PCWindow title="Join Us as a Speaker" className="mb-32">
