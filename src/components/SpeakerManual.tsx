@@ -15,9 +15,9 @@ export default function SpeakerManual() {
             <header className="fixed top-7 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
                 <nav className="container mx-auto flex justify-between items-center px-16">
                     <Link href="/" className="flex items-center md:space-x-1">
-                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">DEV</span>
+                        <span className="text-xl md:text-3xl font-bold text-[#1a1a1a]">DEV</span>
                         <Image src="/planet.png" alt="Planet" width={40} height={40} className="ml-0.5 w-6 h-6 md:w-9 md:h-9 animate-spin" style={{ animation: "spin 10s linear infinite" }} />
-                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">LUTION</span>
+                        <span className="text-xl md:text-3xl font-bold text-[#1a1a1a]">LUTION</span>
                     </Link>
                     <Button asChild>
                         <Link href="/" className=" bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border hover:border-2 border-slate-200 hover:border-[#1a1a1a]">

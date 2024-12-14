@@ -58,9 +58,9 @@ export default function DevolutionLanding() {
             <header className="fixed top-7 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
                 <nav className="container mx-auto flex justify-between items-center px-16">
                     <Link href="/" className="flex items-center md:space-x-1">
-                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">DEV</span>
+                        <span className="text-xl md:text-3xl font-bold text-[#1a1a1a]">DEV</span>
                         <Image src="/planet.png" alt="Planet" width={40} height={40} className="ml-0.5 w-6 h-6 md:w-9 md:h-9 animate-spin" style={{ animation: "spin 10s linear infinite" }} />
-                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">LUTION</span>
+                        <span className="text-xl md:text-3xl font-bold text-[#1a1a1a]">LUTION</span>
                     </Link>
                     <div className="hidden md:flex space-x-4 md:text-xs lg:text-sm">
                         {[
@@ -75,6 +75,7 @@ export default function DevolutionLanding() {
                             <HoverLiftElement key={item}><button onClick={() => handleScroll(item.toLowerCase())} className="hover:underline">{item}</button></HoverLiftElement>
                         ))
                         }
+                        <HoverLiftElement><a href="/previous-editions" className="hover:underline">Previous Editions</a></HoverLiftElement>
                     </div>
                     <div className="md:hidden">
                         <Button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="bg-[#1a1a1a] text-[#f5e6d3] ">
@@ -85,13 +86,6 @@ export default function DevolutionLanding() {
                         <Button asChild>
                             <Link href="/speaker-manual" className=" bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border hover:border-2 border-slate-200 hover:border-[#1a1a1a]">
                                 Speaker Manual
-                            </Link>
-                        </Button>
-                    </HoverLiftElement>
-                    <HoverLiftElement className="hidden md:block">
-                    <Button asChild>
-                            <Link href="/previous-editions" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
-                                Previous Editions
                             </Link>
                         </Button>
                     </HoverLiftElement>
@@ -107,24 +101,15 @@ export default function DevolutionLanding() {
                             "FAQs",
                             "Contact",
                         ].map((item) => (
-                            <button
-                                key={item}
-                                onClick={() => handleScroll(item.toLowerCase())}
-                                className="block py-2 px-4 hover:bg-[#4ecdc4]">
-                                {item}
-                            </button>
+                            <button key={item} onClick={() => handleScroll(item.toLowerCase())} className="block py-2 px-4 hover:bg-[#4ecdc4]">{item}</button>
                         ))}
+                        <a href="/previous-editions" className="block py-2 px-4 hover:bg-[#4ecdc4]">Previous Editions</a>
                         <div className="flex justify-between">
-                        <Button asChild>
-                            <Link href="/speaker-manual" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
-                                Speaker Manual
-                            </Link>
-                        </Button>
-                        <Button asChild>
-                            <Link href="/previous-editions" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
-                                Previous Editions
-                            </Link>
-                        </Button>
+                            <Button asChild>
+                                <Link href="/speaker-manual" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
+                                    Speaker Manual
+                                </Link>
+                            </Button>
                         </div>
                     </div>
                 )}
@@ -140,10 +125,10 @@ export default function DevolutionLanding() {
                         <GlitchText text="LUTION" className="text-6xl md:text-8xl font-bold  text-[#1a1a1a]" />
                     </div>
                     <div className="flex flex-col gap-5 ">
-                        <div className="text-xl md:text-4xl flex gap-2 md:gap-5   justify-center items-center rampartfont font-bold  ">
+                        <div className="text-xl md:text-4xl flex gap-2 md:gap-5   justify-center items-center font-bold  ">
                             <CalendarClockIcon className="h-[22px] md:h-[36px]  " height={36} width={36} />  19th January 2025
                         </div>
-                        <div className="text-lg md:text-3xl flex  gap-5 justify-center items-center rampartfont font-bold mb-8 ">
+                        <div className="text-lg md:text-3xl flex  gap-5 justify-center items-center font-bold mb-8 ">
                             <MapPinned className="h-[18px] md:h-[30px] " height={30} width={30} /> DA-IICT Gandhinagar
                         </div>
                     </div>
@@ -195,7 +180,7 @@ export default function DevolutionLanding() {
                         className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
                         {[
                             {
-                                date: "Dec 12, 2024",
+                                date: "Dec 15, 2024",
                                 event: "Speaker Registration Opens",
                                 icon: Zap,
                             },
