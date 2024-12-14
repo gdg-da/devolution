@@ -4,12 +4,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { PCWindow, AnimatedBox } from './UIComponents'
+import SpaceStrip from './ui/spacebutton';
 
 export default function SpeakerManual() {
     return (
         <div className="min-h-screen bg-[#f5e6d3] font-mono text-[#1a1a1a] overflow-x-hidden">
             <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
-            <header className="fixed top-0 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
+            <SpaceStrip/>
+            <header className="fixed top-7 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
                 <nav className="container mx-auto flex justify-between items-center px-16">
                     <Link href="/" className="flex items-center md:space-x-1">
                         <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">

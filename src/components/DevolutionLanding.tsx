@@ -15,6 +15,8 @@ import {
     Award,
     Twitter,
     Menu,
+    MapPinned,
+    CalendarClockIcon,
 } from "lucide-react";
 import {
     PCWindow,
@@ -26,6 +28,7 @@ import {
 } from "./UIComponents";
 import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import SpaceButton from "./ui/spacebutton";
 
 export default function DevolutionLanding() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -70,10 +73,13 @@ export default function DevolutionLanding() {
     return (
         <div className="min-h-screen bg-[#f5e6d3] font-mono text-[#1a1a1a] overflow-x-hidden scroll-smooth">
             <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
-            <header className="fixed top-0 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
+            <SpaceButton />
+
+            <header className="fixed top-7 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
+
                 <nav className="container mx-auto flex justify-between items-center px-16">
                     <Link href="/" className="flex items-center md:space-x-1">
-                        <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
+                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">
                             DEV
                         </span>
                         <Image
@@ -81,10 +87,10 @@ export default function DevolutionLanding() {
                             alt="Planet"
                             width={40}
                             height={40}
-                            className="ml-0.5 w-8 h-8 md:w-10 md:h-10 animate-spin"
+                            className="ml-0.5 w-6 h-6 md:w-9 md:h-9 animate-spin"
                             style={{ animation: "spin 10s linear infinite" }}
                         />
-                        <span className="text-2xl md:text-4xl font-bold retro-text text-[#1a1a1a]">
+                        <span className="text-xl md:text-3xl font-bold rampartfont text-[#1a1a1a]">
                             LUTION
                         </span>
                     </Link>
@@ -117,7 +123,7 @@ export default function DevolutionLanding() {
                     </div>
                     <HoverLiftElement className="hidden md:block">
                         <Button asChild>
-                            <Link href="/speaker-manual" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
+                            <Link href="/speaker-manual" className=" bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border hover:border-2 border-slate-200 hover:border-[#1a1a1a]">
                                 Speaker Manual
                             </Link>
                         </Button>
@@ -150,11 +156,27 @@ export default function DevolutionLanding() {
                 )}
             </header>
             <main className="container mx-auto px-4 py-16 relative z-10 lg:px-16 mt-24">
+
+
                 <section id="about" className="text-center mb-32">
+
+                    <div className=" flex justify-center items-center font-bold mb-4 md:mb-8 ">
+                        <Image
+                            src='/gdg-horizontal.svg'
+                            width={300}
+                            height={1000}
+                            alt="gdg"
+                            className="w-52 sm:w-64 md:w-80 lg:w-96"
+                        />
+                    </div>
+
+
                     <div className="flex justify-center items-center mb-8">
+
+
                         <GlitchText
                             text="DEV"
-                            className="text-6xl md:text-8xl font-bold retro-text text-[#1a1a1a]"
+                            className="text-6xl md:text-8xl font-bold  text-[#1a1a1a]"
                         />
                         <Image
                             src="/planet.png"
@@ -166,26 +188,42 @@ export default function DevolutionLanding() {
                         />
                         <GlitchText
                             text="LUTION"
-                            className="text-6xl md:text-8xl font-bold retro-text text-[#1a1a1a]"
+                            className="text-6xl md:text-8xl font-bold  text-[#1a1a1a]"
                         />
                     </div>
+
+                    <div className="flex flex-col gap-5 ">
+                        <div className="text-xl md:text-4xl flex gap-2 md:gap-5   justify-center items-center rampartfont font-bold  ">
+                            <CalendarClockIcon className="h-[22px] md:h-[36px]  " height={36} width={36} />  19th January 2025
+                        </div>
+
+                        <div className="text-lg md:text-3xl flex  gap-5 justify-center items-center rampartfont font-bold mb-8 ">
+                            <MapPinned className="h-[18px] md:h-[30px] " height={30} width={30} /> DA-IICT Gandhinagar
+                        </div>
+
+                    </div>
+
                     <TypeAnimation
                         sequence={[
                             // Same substring at the start will only be typed out once, initially
-                            "Where Technology Evolves",
-                            500,
-                            "Where People Evolve",
-                            500,
-                            "Where Ideas Evolve",
-                            500,
+                            "Where Code Evolves and Innovation Grows",
+                            1500,
+                            "Where Code Evolves and Innovation Leads",
+                            1500,
+                            
+                            "Where Code Evolves and Innovation Ignites",
+                            1500,
+                            "Where Code Evolves and Innovation Shines",
+                            1500,
+
                             "Where Code Evolves and Innovation Thrives",
                             5000,
                         ]}
                         wrapper="span"
-                        speed={50}
+                        speed={30}
                         style={{ display: "inline-block" }}
-                        repeat={0}
-                        className="text-xl md:text-3xl mb-8 myfont"
+                        repeat={Infinity}
+                        className="text-base md:text-2xl mb-8 myfont font-normal italic bg-yellow-200/85"
                     />
                 </section>
                 <PCWindow title="About Dev-o-lution" className="mb-32">
@@ -416,14 +454,14 @@ export default function DevolutionLanding() {
                         <p className="text-xl mb-4">
                             Registration for Dev-o-lution are coming soon!
                         </p>
-                        
+
                         <Button asChild className="bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#ff6b6b] text-lg px-8 py-4 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
-                        <Link
-                            target="_blank"
-                            href="https://unstop.com/p/dev-o-lution-google-developer-group-on-campus-daiict-1285732"
-                            className="text-[#000000] transition-colors hover-lift p-2">
-                            Dev-o-lution on Unstop
-                        </Link>
+                            <Link
+                                target="_blank"
+                                href="https://unstop.com/p/dev-o-lution-google-developer-group-on-campus-daiict-1285732"
+                                className="text-[#000000] transition-colors hover-lift p-2">
+                                Dev-o-lution on Unstop
+                            </Link>
                         </Button>
                         <p className="text-2xl font-bold pt-6">See you at the event!</p>
                     </div>

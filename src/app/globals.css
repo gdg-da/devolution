@@ -16,11 +16,27 @@
     font-family: "Aeonik Medium";
   }
 
+  @font-face {
+    font-family: "Rampart One";
+    src: url("https://db.onlinewebfonts.com/t/32837c99f5807dfd6effb57ce38b5697.eot");
+    src: url("https://db.onlinewebfonts.com/t/32837c99f5807dfd6effb57ce38b5697.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/32837c99f5807dfd6effb57ce38b5697.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/32837c99f5807dfd6effb57ce38b5697.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/32837c99f5807dfd6effb57ce38b5697.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/32837c99f5807dfd6effb57ce38b5697.svg#Rampart One")format("svg");
+}
+
+
+.rampartfont{
+    font-family: "Rampart One";
+}
+
   
 
-@font-face {
+/* @font-face {
     font-family: 'RetroFont';
-}
+    src: url('/path-to-retro-font.woff2') format('woff2');
+} */
 
 body {
     background-color: #f5e6d3;
@@ -28,8 +44,12 @@ body {
 }
 
 .retro-text {
-    font-family: 'RetroFont', monospace;
-    text-shadow: 2px 2px 0px rgba(26, 26, 26, 0.5);
+    /* font-family: 'RetroFont', monospace; */
+
+    font-family: "Rampart One";
+    /* text-shadow: 2px 2px 0px rgba(26, 26, 26, 0.5); */
+    
+    
 }
 
 .shadow-neo {
