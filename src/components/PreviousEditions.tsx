@@ -78,7 +78,7 @@ export default function PreviousEditions() {
                 <div className="md:w-3/4">
                   <h3 className="text-2xl font-bold mb-2">Material UI</h3>
                   <p><strong>Speaker:</strong> Samir Motwani | Entrepreneur, Creative Director, RapidOps Solutions</p>
-                  <p className="mt-2">Co-Founded RapidOps Solutions, a digital product development company. He follows practice of "Being Real and Agile". Samir is passionate about minimalistic design and love to conceptualize disruptive marketing ideas</p>
+                  <p className="mt-2">Co-Founded RapidOps Solutions, a digital product development company. He follows practice of &quot;Being Real and Agile&quot;. Samir is passionate about minimalistic design and love to conceptualize disruptive marketing ideas</p>
                 </div>
               </div>
 
@@ -190,7 +190,7 @@ export default function PreviousEditions() {
                   <p><strong>Designation:</strong> CTO at RapidOps</p>
                   <p>The session started with a detailed introduction of Angular 2.0 including a structured breakdown of Angular 2.0 and the new features/improvements from Angular 1. Further typescript was introduced and how to use it was explained.</p>
                   <p>A hands-on session for Angular 2.0 followed. By the end of the session everybody had developed a basic web page which used Angular 2.0 in it.</p>
-                  <p>The event met its end with the vote of thanks to the speakers and satisfied attendee's.</p>
+                  <p>The event met its end with the vote of thanks to the speakers and satisfied attendee&apos;s.</p>
                 </div>
               </div>
 
