@@ -60,12 +60,12 @@ export default function DevolutionLanding() {
             <SpaceButton />
             <header className="fixed top-7 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
                 <nav className="container mx-auto flex justify-between items-center px-16">
-                    <Link href="/" className="flex items-center md:space-x-1">
+                    <Link href="/" className="flex items-center md:space-x-1  retro-text">
                         <span className="text-xl md:text-3xl font-bold text-[#1a1a1a]">DEV</span>
                         <Image src="/planet.png" alt="Planet" width={40} height={40} className="ml-0.5 w-6 h-6 md:w-9 md:h-9 animate-spin" style={{ animation: "spin 10s linear infinite" }} />
                         <span className="text-xl md:text-3xl font-bold text-[#1a1a1a]">LUTION</span>
                     </Link>
-                    <div className="hidden md:flex space-x-4 md:text-xs lg:text-sm">
+                    <div className="hidden md:flex space-x-4 md:text-sm lg:text-lg font-bold">
                         {[
                             "About",
                             "Timeline",
@@ -107,13 +107,7 @@ export default function DevolutionLanding() {
                             <button key={item} onClick={() => handleScroll(item.toLowerCase())} className="block py-2 px-4 hover:bg-[#4ecdc4]">{item}</button>
                         ))}
                         <a href="/previous-editions" className="block py-2 px-4 hover:bg-[#4ecdc4]">Previous Editions</a>
-                        <div className="flex justify-between">
-                            <Button asChild>
-                                <Link href="/speaker-manual" className="bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border-2 border-[#1a1a1a]">
-                                    Speaker Manual
-                                </Link>
-                            </Button>
-                        </div>
+                        <a href="/speaker-manual" className="block py-2 px-4 hover:bg-[#4ecdc4]">Speaker Manual</a>
                     </div>
                 )}
             </header>
@@ -127,7 +121,7 @@ export default function DevolutionLanding() {
                         <Image src="/planet.png" alt="Planet" width={96} height={96} className="mx-1 w-16 h-16 md:w-24 md:h-24 animate-spin" style={{ animation: "spin 10s linear infinite" }} />
                         <GlitchText text="LUTION" className="text-6xl md:text-8xl font-bold  text-[#1a1a1a]" />
                     </div>
-                    <div className="flex flex-col gap-5 ">
+                    <div className="flex flex-col gap-5 retro-text">
                         <div className="text-xl md:text-4xl flex gap-2 md:gap-5   justify-center items-center font-bold  ">
                             <CalendarClockIcon className="h-[22px] md:h-[36px]  " height={36} width={36} />  19th January 2025
                         </div>
@@ -222,25 +216,47 @@ export default function DevolutionLanding() {
                             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-[#4ecdc4] p-2 border-4 border-[#1a1a1a] sm:mb-0 mb-[60px]">
                                 <TabsTrigger value="web3" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Web3/Blockchain</TabsTrigger>
                                 <TabsTrigger value="ai" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">AI/ML</TabsTrigger>
-                                <TabsTrigger value="mobile" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Open Source</TabsTrigger>
-                                <TabsTrigger value="iot" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Web/App dev</TabsTrigger>
+                                <TabsTrigger value="open-source" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Open Source</TabsTrigger>
+                                <TabsTrigger value="webdev" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Web dev</TabsTrigger>
                             </TabsList>
                             <TabsContent value="web3" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
                                 <h3 className="text-2xl font-bold mb-4">Web3 & Blockchain</h3>
-                                <p>Explore decentralized applications and the future of the web.</p>
+                                <p className="lg">Explore the decentralized future of the web with Web3 and Blockchain technologies. Learn how these innovations are transforming industries by enabling secure, transparent, and tamper-proof transactions. Dive into the world of smart contracts, decentralized applications (dApps), and the underlying principles that make blockchain a revolutionary technology.</p>
                             </TabsContent>
                             <TabsContent value="ai" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
                                 <h3 className="text-2xl font-bold mb-4">Artificial Intelligence & Machine Learning</h3>
-                                <p>Dive into intelligent systems and algorithms to solve complex problems.</p>
+                                <p className="lg">Dive into the fascinating world of Artificial Intelligence and Machine Learning. Discover how intelligent systems and algorithms are designed to solve complex problems, automate tasks, and provide insights from vast amounts of data. Learn about neural networks, deep learning, and the practical applications of AI/ML in various industries.</p>
                             </TabsContent>
-                            <TabsContent value="mobile" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                            <TabsContent value="open-source" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
                                 <h3 className="text-2xl font-bold mb-4">Open Source</h3>
-                                <p>Learn how to meaningfully contribute to Open Source Projects.</p>
+                                <p className="lg">Learn how to meaningfully contribute to Open Source Projects and become part of a global community of developers. Understand the principles of open-source software, the benefits of collaboration, and how to get started with contributing to projects that matter. Gain insights into the tools and platforms that facilitate open-source development.</p>
                             </TabsContent>
-                            <TabsContent value="iot" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                                <h3 className="text-2xl font-bold mb-4">Development</h3>
-                                <p>Unlock your potential and gain insights from experts to supercharge your development skills.</p>
+                            <TabsContent value="webdev" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                                <h3 className="text-2xl font-bold mb-4">Web Development</h3>
+                                <p className="lg">Unlock your potential in web development by gaining insights from experts in the field. Learn about the latest trends, tools, and technologies that are shaping the future of the web. From front-end frameworks to back-end architectures, discover how to build robust, scalable, and user-friendly web applications.</p>
                             </TabsContent>
+                            <TabsContent value="appdev" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                                <h3 className="text-2xl font-bold mb-4">App Development</h3>
+                                <p className="lg">Learn how to build mobile applications that provide seamless user experiences. Explore the different platforms, tools, and frameworks used in app development. Understand the process of designing, developing, and deploying mobile apps to the cloud, and how to ensure they are secure and performant.</p>
+                            </TabsContent>
+                            <TabsContent value="cloud" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                                <h3 className="text-2xl font-bold mb-4">Cloud Computing</h3>
+                                <p className="lg">Explore the world of cloud computing and its transformative impact on businesses and technology. Learn about the different cloud service models (IaaS, PaaS, SaaS), cloud deployment models, and the benefits of using cloud services. Understand how to leverage cloud platforms for scalability, flexibility, and cost-efficiency.</p>
+                            </TabsContent>
+                            <TabsContent value="cyber" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                                <h3 className="text-2xl font-bold mb-4">Cybersecurity</h3>
+                                <p className="lg">Learn about the critical field of cybersecurity and how to protect your applications and data from threats. Understand the principles of secure coding, network security, and the various types of cyber attacks. Gain insights into best practices for safeguarding information and ensuring the integrity and confidentiality of your systems.</p>
+                            </TabsContent>
+                            <TabsContent value="startup" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                                <h3 className="text-2xl font-bold mb-4">Start-up</h3>
+                                <p className="lg">Get insights on how to start your own tech company from industry experts and successful entrepreneurs. Learn about the challenges and opportunities in the start-up ecosystem, from ideation to funding and scaling. Understand the importance of innovation, market research, and building a strong team to drive your start-up to success.</p>
+                            </TabsContent>
+                            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-[#4ecdc4] p-2 border-4 border-[#1a1a1a] mt-4">
+                            <TabsTrigger value="appdev" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">App dev</TabsTrigger>
+                                <TabsTrigger value="cloud" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Cloud Computing</TabsTrigger>
+                                <TabsTrigger value="cyber" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Cybersecurity</TabsTrigger>
+                                <TabsTrigger value="startup" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Start-up</TabsTrigger>
+                            </TabsList>
                         </Tabs>
                     </section>
                 </PCWindow>

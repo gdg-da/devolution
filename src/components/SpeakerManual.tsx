@@ -14,7 +14,7 @@ export default function SpeakerManual() {
             <SpaceStrip />
             <header className="fixed top-7 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
                 <nav className="container mx-auto flex justify-between items-center px-16">
-                    <Link href="/" className="flex items-center md:space-x-1">
+                    <Link href="/" className="flex items-center md:space-x-1  retro-text">
                         <span className="text-xl md:text-3xl font-bold text-[#1a1a1a]">DEV</span>
                         <Image src="/planet.png" alt="Planet" width={40} height={40} className="ml-0.5 w-6 h-6 md:w-9 md:h-9 animate-spin" style={{ animation: "spin 10s linear infinite" }} />
                         <span className="text-xl md:text-3xl font-bold text-[#1a1a1a]">LUTION</span>
@@ -64,39 +64,50 @@ export default function SpeakerManual() {
                     <div className="space-y-8">
                         {[
                             {
-                                title: "1. App/Web Development",
-                                topics: [
-                                    "Angular", "Firebase", "Progressive Web Apps (PWA)", "Chrome Developer Tools",
-                                    "Performance Optimization", "Accessibility", "TensorFlow.js",
-                                    "Modern Web Application Capabilities", "UI/UX Trends",
-                                    "Flutter/Android Scalable Architecture Best Practices",
-                                    "Kotlin Multiplatform and Flutter: Code once, deploy across platforms",
-                                    "Optimizing Apps for Android Go Edition",
-                                    "No-code and Pro-code Platforms for Rapid App Development",
-                                    "Adaptive Layouts and Latest UI/UX Design Trends"
-                                ]
+                                title: "1. Web3 and Blockchain Technologies",
+                                topics: ["Blockchain Development", "NFTs", "Web3 Development"]
                             },
                             {
                                 title: "2. Artificial Intelligence & Machine Learning (AI/ML)",
                                 topics: [
-                                    "Generative AI", "Large Language Models", "Stable Diffusion", "Midjourney",
-                                    "Prompt Engineering", "TensorFlow", "Vertex AI", "AutoML", "Dataflow",
-                                    "Firebase for ML Applications", "ML Kit"
+                                    "Generative AI", "Large Language Models", "Stable Diffusion", "AI Agents", "Gemma",
+                                    "Prompt Engineering", "Natural Language Processing", "Machine Learning", "AI Ethics",
+                                    "Recommendation Systems", "Computer Vision", "Deep Learning", "Reinforcement Learning"
                                 ]
                             },
                             {
-                                title: "3. Cloud Computing",
+                                title: "3. Open Source Technologies",
+                                topics: ["Open Source Contribution", "GitHub Actions",
+                                    "GSoC and Outreachy", "Open Source Best Practices"
+                                ]
+                            },
+                            {
+                                title: "4. Web Development",
                                 topics: [
-                                    "Natural Language Processing on the Cloud", "Google Kubernetes Engine (GKE)",
-                                    "Compute Engine", "Cloud Storage", "BigQuery", "Cloud Functions"
+                                    "React", "Next.js", "Angular", "WebAssembly", "Deno", "Rust",
+                                    "Web Components", "Jamstack", "PWA", "Web Performance", "Web Accessibility", "Edge Computing"
                                 ]
                             },
                             {
-                                title: "4. Web3 and Blockchain Technologies",
-                                topics: ["Blockchain Development", "NFTs", "Web3 Development"]
+                                title: "5. Mobile Development",
+                                topics: ["Flutter", "React Native", "Swift", "Kotlin", "Jetpack Compose", "Android"]
                             },
                             {
-                                title: "5. Startups & Emerging Technologies",
+                                title: "6. Cloud Computing",
+                                topics: [
+                                    "Azure", "AWS", "GCP", "Natural Language Processing on the Cloud", "Cloud Storage",
+                                    "BigQuery", "Cloud Native Development", "Edge Computing",
+                                ]
+                            },
+                            {
+                                title: "7. Cybersecurity",
+                                topics: [
+                                    "Cybersecurity Best Practices", "Secure Coding", "Incident Response", "Quantum Security",
+                                    "Threat Intelligence", "Security Operations", "Security Automation", "Cloud Security"
+                                ]
+                            },
+                            {
+                                title: "8. Startups & Emerging Technologies",
                                 topics: [
                                     "Preparing a Pitch Deck for Tech Startups",
                                     "Raising Funds for Tech Startups",
