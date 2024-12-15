@@ -22,32 +22,35 @@ export default function DevolutionLanding() {
         }
     };
 
-    interface FormDataEntries {
-        [key: string]: FormDataEntryValue;
-    }
-
-    const handleSubmit = async (
-        event: React.FormEvent<HTMLFormElement>
-    ): Promise<void> => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
-        const data: FormDataEntries = Object.fromEntries(formData.entries());
+        const data = Object.fromEntries(formData.entries());
+
+        const requiredFields = ["name", "contact-person", "email", "contact-number", "message"];
+
+        for (const field of requiredFields) {
+            if (!data[field] || String(data[field]).trim() === "") {
+                alert(`Please fill out the ${field.replace("-", " ")} field.`);
+                return;
+            }
+        }
 
         try {
-            const response: Response = await fetch("/api/discord-webhook", {
+            const response = await fetch("/api/discord-webhook", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
             });
 
             if (response.ok) {
-                alert("Your submission has been sent successfully!");
+                alert("Your sponsorship proposal has been submitted successfully!");
             } else {
-                alert("Failed to submit. Please try again.");
+                alert("Failed to submit. Please check your input and try again.");
             }
         } catch (error) {
-            console.error(error);
-            alert("An error occurred. Please try again.");
+            console.error("Submission Error:", error);
+            alert("An error occurred while submitting your proposal. Please try again.");
         }
     };
 
@@ -160,8 +163,8 @@ export default function DevolutionLanding() {
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                         {[
-                            { icon: Code, text: "Cutting-edge Tech" },
-                            { icon: Cpu, text: "AI & Machine Learning" },
+                            { icon: Code, text: "Tech Talks" },
+                            { icon: Cpu, text: "Hands-On Sessions & Workshops" },
                             { icon: Calendar, text: "January 19, 2025" },
                             { icon: MapPin, text: "DAIICT Campus" },
                         ].map(({ icon: Icon, text }, index) => (
@@ -301,27 +304,38 @@ export default function DevolutionLanding() {
                             <Input
                                 name="name"
                                 type="text"
-                                placeholder="Name of your Organization"
+                                placeholder="Name of your Organization *"
                                 className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]"
+                                required
                             />
                             <Input
                                 name="contact-person"
                                 type="text"
-                                placeholder="Contact Person"
+                                placeholder="Contact Person *"
                                 className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]"
+                                required
                             />
                             <Input
                                 name="email"
                                 type="email"
-                                placeholder="Organization Email"
+                                placeholder="Organization Email *"
                                 className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]"
+                                required
                             />
                             <Input
                                 name="contact-number"
-                                type="text"
-                                placeholder="Contact Number"
+                                type="number"
+                                placeholder="Contact Number *"
                                 className="bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a]"
+                                required
                             />
+                            <textarea
+                                name="message"
+                                placeholder="Message or Proposal Details *"
+                                className="w-full bg-[#f5e6d3] border-2 border-[#1a1a1a] text-[#1a1a1a] placeholder-[#1a1a1a] p-2 rounded-md"
+                                rows={4}
+                                required
+                            ></textarea>
                             <Button
                                 type="submit"
                                 className="w-full bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] border-2 border-[#1a1a1a] transition-colors shadow-neo hover-lift">
@@ -337,10 +351,10 @@ export default function DevolutionLanding() {
                                 q: "Who can participate?",
                                 a: "Dev-o-lution is open to all students and recent graduates passionate about technology and innovation.",
                             },
-                            { q: "Is there a participation fee?", a: "Yes, There is!" },
+                            { q: "Is there a participation fee?", a: "Yes, There is! Please checkout the tickets on Unstop." },
                             {
                                 q: "What should I bring?",
-                                a: "Bring your laptop, charger, and any other devices you need for development. We'll provide food, drinks, and a great coding atmosphere!",
+                                a: "Bring your laptop, charger, and any other devices you need for development. We'll provide a great coding atmosphere!",
                             },
                             {
                                 q: "Can I join as a speaker?",
@@ -361,7 +375,6 @@ export default function DevolutionLanding() {
                         <p className="text-xl mb-4">
                             Registration for Dev-o-lution are coming soon!
                         </p>
-
                         <Button asChild className="bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#ff6b6b] text-lg px-8 py-6 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
                             <Link
                                 target="_blank"

@@ -8,7 +8,7 @@ interface PCWindowProps {
 
 export const PCWindow: React.FC<PCWindowProps> = ({ title, className, children }) => {
     return (
-        <div className={`pc-window bg-[#4ecdc4] p-8 border-4 border-[#1a1a1a] neo-box ${className}`}>
+        <div className={`pc-window bg-[#4ecdc4] p-3 lg:p-8 border-4 border-[#1a1a1a] neo-box ${className}`}>
             <div className="window-controls">
                 <div className="window-control window-close"></div>
                 <div className="window-control window-minimize"></div>
@@ -27,7 +27,7 @@ interface AnimatedBoxProps {
 
 export const PCWindow2: React.FC<PCWindowProps> = ({ title, className, children }) => {
     return (
-        <div className={`pc-window bg-[#FF6B6B] p-8 border-4 border-[#1a1a1a] neo-box ${className}`}>
+        <div className={`pc-window bg-[#FF6B6B] p-3 lg:p-8 border-4 border-[#1a1a1a] neo-box ${className}`}>
             <div className="window-controls">
                 <div className="window-control window-close"></div>
                 <div className="window-control window-minimize"></div>

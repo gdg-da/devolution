@@ -34,7 +34,7 @@ export default function SpeakerManual() {
                 </section>
                 <PCWindow title="Welcome to Dev-o-lution!" className="mb-16">
                     <p className="text-lg mb-4">
-                        We are thrilled to announce the <strong>Call for Speakers (CFP)</strong> for our inaugural event. If you are passionate about your work and want to share your experiences with one of the largest tech audiences in Gandhinagar, you&apos;ve come to the right place.
+                        We are thrilled to announce the <strong>Call for Speakers (CFS)</strong> for our event. If you are passionate about your work and want to share your experiences with one of the largest tech audiences in Gandhinagar, you&apos;ve come to the right place.
                     </p>
                 </PCWindow>
                 <PCWindow2 title="Target Audience" className="mb-16">
@@ -118,7 +118,7 @@ export default function SpeakerManual() {
                         ))}
                     </div>
                 </PCWindow2>
-                <PCWindow title="Guidelines for CFP Submission" className="mb-16">
+                <PCWindow title="Guidelines for CFS Submission" className="mb-16">
                     <div className="space-y-8">
                         <div>
                             <h3 className="text-2xl font-bold mb-4">DOs</h3>
@@ -142,7 +142,7 @@ export default function SpeakerManual() {
                     <NeoBrutalismBenefits />
                 </PCWindow2>
                 <PCWindow title="" className="mb-16">
-                    <div className="bg-[#4ecdc4] p-8 border-4 border-[#1a1a1a] shadow-neo">
+                    <div className="bg-[#ff6b6b] p-8 border-4 border-[#1a1a1a] shadow-neo">
                         <h1 className="text-3xl font-bold mb-4 retro-text text-center">Ready to Share Your Expertise?</h1>
                         <p className="text-lg mb-6 text-center">
                             <span className='font-bold'>Take the first step towards being a part of Dev-o-lution!</span>
@@ -152,7 +152,7 @@ export default function SpeakerManual() {
                             <span className='text-sm'>Reach out to dsc@daiict.ac.in with any questions.</span>
                         </p>
                         <div className="text-center">
-                            <Button asChild className="bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] text-2xl px-12 py-6 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
+                            <Button asChild className="bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] text-lg lg:text-2xl px-8 lg:px-12 py-6 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
                                 <a href="https://forms.gle/da1VpuiYiZoB5rLB6" target="_blank" rel="noopener noreferrer">
                                     Submit Your Proposal Now
                                 </a>
