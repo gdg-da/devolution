@@ -89,25 +89,32 @@ export default function SpeakerManual() {
                                 ]
                             },
                             {
-                                title: "5. Mobile Development",
+                                title: "5. DSA & Competetive programming",
+                                topics: [
+                                    "DSA in System Design", "Algorithmic Thinking for AI/ML Models", "Understanding Segment Trees and Fenwick Trees",
+                                    "Advanced Applications of Binary Trees and BSTs", "String Algorithms for Text Processing"
+                                ]
+                            },
+                            {
+                                title: "6. Mobile Development",
                                 topics: ["Flutter", "React Native", "Swift", "Kotlin", "Jetpack Compose", "Android"]
                             },
                             {
-                                title: "6. Cloud Computing",
+                                title: "7. Cloud Computing",
                                 topics: [
                                     "Azure", "AWS", "GCP", "Natural Language Processing on the Cloud", "Cloud Storage",
                                     "BigQuery", "Cloud Native Development", "Edge Computing",
                                 ]
                             },
                             {
-                                title: "7. Cybersecurity",
+                                title: "8. Cybersecurity",
                                 topics: [
                                     "Cybersecurity Best Practices", "Secure Coding", "Incident Response", "Quantum Security",
                                     "Threat Intelligence", "Security Operations", "Security Automation", "Cloud Security"
                                 ]
                             },
                             {
-                                title: "8. Startups & Emerging Technologies",
+                                title: "9. Startups & Emerging Technologies",
                                 topics: [
                                     "Preparing a Pitch Deck for Tech Startups",
                                     "Raising Funds for Tech Startups",
