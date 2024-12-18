@@ -217,7 +217,7 @@ export default function DevolutionLanding() {
                                 <TabsTrigger value="web3" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Web3/Blockchain</TabsTrigger>
                                 <TabsTrigger value="ai" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">AI/ML</TabsTrigger>
                                 <TabsTrigger value="open-source" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Open Source</TabsTrigger>
-                                <TabsTrigger value="webdev" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Web dev</TabsTrigger>
+                                <TabsTrigger value="webappdev" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Web/App dev</TabsTrigger>
                             </TabsList>
                             <TabsContent value="web3" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
                                 <h3 className="text-2xl font-bold mb-4">Web3 & Blockchain</h3>
@@ -231,13 +231,13 @@ export default function DevolutionLanding() {
                                 <h3 className="text-2xl font-bold mb-4">Open Source</h3>
                                 <p className="lg">Learn how to meaningfully contribute to Open Source Projects and become part of a global community of developers. Understand the principles of open-source software, the benefits of collaboration, and how to get started with contributing to projects that matter. Gain insights into the tools and platforms that facilitate open-source development.</p>
                             </TabsContent>
-                            <TabsContent value="webdev" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                                <h3 className="text-2xl font-bold mb-4">Web Development</h3>
-                                <p className="lg">Unlock your potential in web development by gaining insights from experts in the field. Learn about the latest trends, tools, and technologies that are shaping the future of the web. From front-end frameworks to back-end architectures, discover how to build robust, scalable, and user-friendly web applications.</p>
+                            <TabsContent value="webappdev" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                                <h3 className="text-2xl font-bold mb-4">Web & App Development</h3>
+                                <p className="lg">Unlock your potential in web and app development by gaining insights from experts in the field. Learn about the latest trends, tools, and technologies that are shaping the future of development. Discover how to build robust, scalable, and user-friendly applications.</p>
                             </TabsContent>
-                            <TabsContent value="appdev" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                                <h3 className="text-2xl font-bold mb-4">App Development</h3>
-                                <p className="lg">Learn how to build mobile applications that provide seamless user experiences. Explore the different platforms, tools, and frameworks used in app development. Understand the process of designing, developing, and deploying mobile apps to the cloud, and how to ensure they are secure and performant.</p>
+                            <TabsContent value="dsa" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                                <h3 className="text-2xl font-bold mb-4">DSA</h3>
+                                <p className="lg">Unlock the secrets to acing coding challenges and technical interviews by diving deep into the world of DSA and Competitive Programming. Gain the skills to think critically and solve complex problems efficiently. Whether you&apos;re preparing for job placements, excelling in hackathons, or simply sharpening your coding expertise, this talk is your gateway to becoming a problem-solving powerhouse!</p>
                             </TabsContent>
                             <TabsContent value="cloud" className="bg-[#ff6b6b] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
                                 <h3 className="text-2xl font-bold mb-4">Cloud Computing</h3>
@@ -252,7 +252,7 @@ export default function DevolutionLanding() {
                                 <p className="lg">Get insights on how to start your own tech company from industry experts and successful entrepreneurs. Learn about the challenges and opportunities in the start-up ecosystem, from ideation to funding and scaling. Understand the importance of innovation, market research, and building a strong team to drive your start-up to success.</p>
                             </TabsContent>
                             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-[#4ecdc4] p-2 border-4 border-[#1a1a1a] mt-4">
-                            <TabsTrigger value="appdev" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">App dev</TabsTrigger>
+                            <TabsTrigger value="dsa" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">DSA</TabsTrigger>
                                 <TabsTrigger value="cloud" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Cloud Computing</TabsTrigger>
                                 <TabsTrigger value="cyber" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Cybersecurity</TabsTrigger>
                                 <TabsTrigger value="startup" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Start-up</TabsTrigger>
