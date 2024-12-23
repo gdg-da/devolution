@@ -212,8 +212,8 @@ export default function DevolutionLanding() {
                 </PCWindow2>
                 <PCWindow title="Dev-o-lution Tracks" className="mb-32">
                     <section id="tracks">
-                        <Tabs defaultValue="web3" className="w-full">
-                            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-[#4ecdc4] p-2 border-4 border-[#1a1a1a] sm:mb-0 mb-[60px]">
+                        <Tabs defaultValue="web3" className="w-fit">
+                            <TabsList className="grid h-fit sm:h-10 w-full grid-cols-2 md:grid-cols-4 bg-[#4ecdc4] p-2 border-4 border-[#1a1a1a] mb-0">
                                 <TabsTrigger value="web3" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Web3/Blockchain</TabsTrigger>
                                 <TabsTrigger value="ai" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">AI/ML</TabsTrigger>
                                 <TabsTrigger value="open-source" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Open Source</TabsTrigger>
@@ -251,7 +251,7 @@ export default function DevolutionLanding() {
                                 <h3 className="text-2xl font-bold mb-4">Start-up</h3>
                                 <p className="lg">Get insights on how to start your own tech company from industry experts and successful entrepreneurs. Learn about the challenges and opportunities in the start-up ecosystem, from ideation to funding and scaling. Understand the importance of innovation, market research, and building a strong team to drive your start-up to success.</p>
                             </TabsContent>
-                            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-[#4ecdc4] p-2 border-4 border-[#1a1a1a] mt-4">
+                            <TabsList className="grid h-fit sm:h-10 w-full grid-cols-2 md:grid-cols-4 bg-[#4ecdc4] p-2 border-4 border-[#1a1a1a] mt-4">
                             <TabsTrigger value="dsa" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">DSA</TabsTrigger>
                                 <TabsTrigger value="cloud" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Cloud Computing</TabsTrigger>
                                 <TabsTrigger value="cyber" className="data-[state=active]:bg-[#ff6b6b] bg-[#4ecdc4] border-2 border-[#1a1a1a] hover-lift">Cybersecurity</TabsTrigger>
