@@ -78,6 +78,7 @@ export default function DevolutionLanding() {
                             <HoverLiftElement key={item}><button onClick={() => handleScroll(item.toLowerCase())} className="hover:underline">{item}</button></HoverLiftElement>
                         ))
                         }
+                        <HoverLiftElement><a href="/speakers" className="hover:underline">Speakers</a></HoverLiftElement>
                         <HoverLiftElement><a href="/previous-editions" className="hover:underline">Previous Editions</a></HoverLiftElement>
                     </div>
                     <div className="md:hidden">

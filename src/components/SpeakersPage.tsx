@@ -20,8 +20,8 @@ const SpeakerCard: React.FC<SpeakerProps> = ({ name, photo, linkedin, position, 
     <div className="bg-[#ff6b6b] p-6 border-4 border-[#1a1a1a] shadow-neo hover:translate-x-1 hover:-translate-y-1 transition-transform">
         <div className="flex flex-col mb-4">
             <Image src={photo} alt={name} width={1500} height={1500} className="mx-auto w-40 lg:w-52 rounded-md border-4 border-[#1a1a1a] mb-4" />
-            <h3 className="text-xl font-bold mb-2">{name}</h3>
-            <p className="text-lg font-bold mb-2">{position}</p>
+            <h3 className="text-lg font-bold mb-2">{name}</h3>
+            <p className="text-base font-bold mb-2">{position}</p>
             <div className="flex space-x-4">
                 {linkedin && (
                     <Link href={linkedin} target="_blank" rel="noopener noreferrer" className="text-[#1a1a1a] hover:text-[#4ecdc4]">
