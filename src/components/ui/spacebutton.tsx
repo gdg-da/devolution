@@ -6,9 +6,9 @@ import styled from 'styled-components';
 const SpaceStrip = () => {
   return (
     <StyledWrapper>
-        <Link href='/speaker-manual'>
+        <Link href='https://unstop.com/p/dev-o-lution-google-developer-group-on-campus-daiict-1285732'>
       <div className="strip">
-        <strong>Call for speakers is open now! </strong><ArrowRightFromLineIcon className='text-white h-4 shadow-md '/> 
+        <strong>Registrations are open now! </strong><ArrowRightFromLineIcon className='text-white h-4 shadow-md '/> 
         <div id="container-stars">
           <div id="stars" />
         </div>

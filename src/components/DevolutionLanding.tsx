@@ -107,11 +107,8 @@ export default function DevolutionLanding() {
           </Link>
           <div className="hidden md:flex space-x-4 md:text-sm lg:text-lg font-bold">
             {[
-              "About",
               "Timeline",
               "Tracks",
-              "Team",
-              "Sponsors",
               "FAQs",
               "Contact",
             ].map((item) => (
@@ -130,7 +127,7 @@ export default function DevolutionLanding() {
             </HoverLiftElement>
             <HoverLiftElement>
               <a href="/previous-editions" className="hover:underline">
-                Previous Editions
+                Previous-Editions
               </a>
             </HoverLiftElement>
           </div>
@@ -144,9 +141,9 @@ export default function DevolutionLanding() {
           <HoverLiftElement className="hidden md:block">
             <Button asChild>
               <Link
-                href="/speaker-manual"
+                href="https://unstop.com/p/dev-o-lution-google-developer-group-on-campus-daiict-1285732"
                 className=" bg-[#1a1a1a] text-[#f5e6d3] hover:bg-[#4ecdc4] hover:text-[#1a1a1a] transition-colors border hover:border-2 border-slate-200 hover:border-[#1a1a1a]">
-                Speaker Manual
+                Register Now!
               </Link>
             </Button>
           </HoverLiftElement>
@@ -154,11 +151,8 @@ export default function DevolutionLanding() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-[#ff6b6b] border-t-2 border-[#1a1a1a] py-2 mt-4">
             {[
-              "About",
               "Timeline",
               "Tracks",
-              "Team",
-              "Sponsors",
               "FAQs",
               "Contact",
             ].map((item) => (
@@ -175,12 +169,12 @@ export default function DevolutionLanding() {
             <a
               href="/previous-editions"
               className="block py-2 px-4 hover:bg-[#4ecdc4]">
-              Previous Editions
+              Previous-Editions
             </a>
             <a
-              href="/speaker-manual"
+              href="https://unstop.com/p/dev-o-lution-google-developer-group-on-campus-daiict-1285732"
               className="block py-2 px-4 hover:bg-[#4ecdc4]">
-              Speaker Manual
+              Register Now!
             </a>
           </div>
         )}
@@ -607,8 +601,11 @@ export default function DevolutionLanding() {
         </PCWindow>
         <PCWindow2 title="Ready to Evolve?" className="mb-32">
           <div className="text-center">
-            <p className="text-xl mb-4">
-              Registration for Dev-o-lution are coming soon!
+            <p className="text-xl lg:text-3xl font-bold mb-4">
+              Registration for Dev-o-lution have started!
+            </p>
+            <p className="text-mb lg:text-xl font-bold mb-4">
+              Checkout our socials for EARLY-BIRD discount code.
             </p>
             <Button
               asChild
@@ -617,7 +614,7 @@ export default function DevolutionLanding() {
                 target="_blank"
                 href="https://unstop.com/p/dev-o-lution-google-developer-group-on-campus-daiict-1285732"
                 className="text-[#000000] transition-colors hover-lift p-4">
-                Dev-o-lution on Unstop
+                Book your tickets Now!
               </Link>
             </Button>
             <p className="text-2xl font-bold pt-6">See you at the event!</p>
