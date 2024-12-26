@@ -116,7 +116,7 @@ export default function SpeakersPage() {
                 <section className="text-center mb-16">
                     <GlitchText text="Our Speakers" className="text-6xl font-bold mb-4 retro-text text-[#1a1a1a]" />
                     <TypeAnimation
-                        sequence={["Meet the speakers who will be sharing their knowledge and expertise at Devlution 2025."]}
+                        sequence={["Meet the speakers who will be sharing their knowledge and expertise at Dev-o-lution 2025."]}
                         style={{ display: "inline-block" }}
                         className="text-base md:text-2xl mb-8 myfont font-normal bold"
                     />
