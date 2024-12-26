@@ -59,7 +59,7 @@ export default function DevolutionLanding() {
             <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
             <SpaceButton />
             <header className="fixed top-7 z-50 bg-[#ff6b6b] text-[#1a1a1a] p-4 border-b-4 border-[#1a1a1a] w-full">
-                <nav className="container mx-auto flex justify-between items-center px-16">
+                <nav className="container mx-auto flex justify-between items-center px-8">
                     <Link href="/" className="flex items-center md:space-x-1  retro-text">
                         <span className="text-xl md:text-3xl font-bold text-[#1a1a1a]">DEV</span>
                         <Image src="/planet.png" alt="Planet" width={40} height={40} className="ml-0.5 w-6 h-6 md:w-9 md:h-9 animate-spin" style={{ animation: "spin 10s linear infinite" }} />
@@ -107,6 +107,7 @@ export default function DevolutionLanding() {
                         ].map((item) => (
                             <button key={item} onClick={() => handleScroll(item.toLowerCase())} className="block py-2 px-4 hover:bg-[#4ecdc4]">{item}</button>
                         ))}
+                        <a href="/speakers" className="block py-2 px-4 hover:bg-[#4ecdc4]">Speakers</a>
                         <a href="/previous-editions" className="block py-2 px-4 hover:bg-[#4ecdc4]">Previous Editions</a>
                         <a href="/speaker-manual" className="block py-2 px-4 hover:bg-[#4ecdc4]">Speaker Manual</a>
                     </div>
