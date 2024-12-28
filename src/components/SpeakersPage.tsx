@@ -90,6 +90,41 @@ const speakers: SpeakerProps[] = [
         linkedin: "https://www.linkedin.com/in/biniwale/",
         position: "Co-Founder & CTO at Downtown club",
         about: "NVIDIA Certified AI Engineer | IIM-A | Sr. Software Engineer- AI | TrackWizz | Data Scientist | Python | Ex-CTO at Downtown | Generative AI | Computer Vision | NLP | Pytorch"
+    },
+    {
+        name: "Harsh Shah",
+        photo: "/HarshShah.jpg",
+        linkedin: "https://www.linkedin.com/in/harshcrop/",
+        position: "CTO at Pedals Up",
+        about: "Harsh Shah is a self-taught developer and the CTO at Pedals Up. With a passion for technology and a curiosity that knows no bounds, he has mastered various programming languages, including C, C++, HTML, CSS, JavaScript, Python, and SQL."
+    },
+    {
+        name: "Piyush Raj",
+        photo: "/PiyushRaj.jpg",
+        linkedin: "https://in.linkedin.com/in/piyushella",
+        position: "Founder, CEO at Vedilink",
+        about: "Product designer and programmer who enjoys solving real-life problems. Currently building a haven for students trying to improve our education system a little."
+    },
+    {
+        name: "Anirudh Khurana",
+        photo: "/AnirudhK.jpg",
+        linkedin: "https://www.linkedin.com/in/anirudh-khurana",
+        position: "Founder at Code and Debug",
+        about: "Founder at Code and Debug | Full Stack Developer | DSA Trainer | Educator with a Mission"
+    },
+    {
+        name: "Kartik Derasari",
+        photo: "/KartikD.jpg",
+        linkedin: "https://www.linkedin.com/in/kartikderasari/",
+        position: "Engineering Lead at Persistent Systems | Google Developer Expert",
+        about: "Kartik Derasari is a highly skilled and passionate Solutions Engineer and a Developer Advocate with a proven track record of success in designing and implementing innovative technology solutions."
+    },
+    {
+        name: "Amit Chopra",
+        photo: "/AmitC.jpg",
+        linkedin: "https://www.linkedin.com/in/amitchopra/",
+        position: "Principal Technical Program Manager at Amazon",
+        about: "Amit is a technology enthusiast who thrives on exploring the latest advancements. As an engaging speaker, he captivate audiences with his passion, expertise, and ability to translate complex concepts into compelling narratives."
     }
 ]
 
