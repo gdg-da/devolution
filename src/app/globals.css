@@ -103,8 +103,8 @@ body {
 }
 
 .neo-box:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 12px 12px 0px #1a1a1a;
+    transform: translate(8px, 8px);
+    box-shadow: 0px 0px 0px #1a1a1a;
 }
 
 @keyframes float {
