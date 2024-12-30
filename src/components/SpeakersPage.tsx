@@ -123,7 +123,7 @@ const speakers: SpeakerProps[] = [
         name: "Amit Chopra",
         photo: "/AmitC.jpg",
         linkedin: "https://www.linkedin.com/in/amitchopra/",
-        position: "Principal Technical Program Manager at Amazon",
+        position: "Principal Technical Program Manager at Ex-Amazon",
         about: "Amit is a technology enthusiast who thrives on exploring the latest advancements. As an engaging speaker, he captivate audiences with his passion, expertise, and ability to translate complex concepts into compelling narratives."
     }
 ]
