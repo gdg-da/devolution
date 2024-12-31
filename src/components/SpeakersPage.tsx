@@ -81,8 +81,8 @@ const speakers: SpeakerProps[] = [
         name: "Vrijraj Singh",
         photo: "/VrijrajSingh.jpg",
         linkedin: "https://www.linkedin.com/in/vrijraj/",
-        position: "CTO at agprop",
-        about: "Vrijraj is a CTO by profession at AGROP and a community champion by passion. He was an organizer for GDG Jalandhar for 7 years. He is a Google Developers Expert for Firebase and Web Technologies."
+        position: "GDE Firebase",
+        about: "Vrijraj is a community champion by passion. He was an organizer for GDG Jalandhar for 7 years. He is a Google Developers Expert for Firebase and Web Technologies."
     },
     {
         name: "Jaydip Biniwale",
