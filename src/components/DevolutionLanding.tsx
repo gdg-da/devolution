@@ -30,6 +30,119 @@ import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import SpaceButton from "./ui/spacebutton";
 
+
+interface SpeakerProps {
+    name: string;
+    photo: string;
+    linkedin: string;
+    position: string;
+    about: string;
+}
+
+const SpeakerCard: React.FC<SpeakerProps> = ({ name, photo, position }) => (
+    <div className="bg-[#ff6b6b] p-2 border-4 border-[#1a1a1a] shadow-neo hover:translate-x-1 hover:-translate-y-1 transition-transform">
+        <div className="flex flex-col mb-4">
+            <Image src={photo} alt={name} width={1000} height={1000} className="mx-auto w-40 lg:w-52 rounded-md border-4 border-[#1a1a1a] mb-4" />
+            <h3 className="text-base font-bold mb-2">{name}</h3>
+            <p className="text-sm font-bold mb-2">{position}</p>
+        </div>
+    </div>
+)
+
+const speakers: SpeakerProps[] = [
+    {
+        name: "Rohan Hundia",
+        photo: "/RohanHundia.jpg",
+        linkedin: "https://www.linkedin.com/in/rohan-hundia-38a94692/",
+        position: "CEO at Unada Labs",
+        about: "Rohan is the Co-Founder and CEO of Unada Labs. As tech entrepreneur driving Unada Labs and as a serial entrepreneur, Rohan and team are poised to transform three major industries - real estate, finance and healthcare with disruptive tech."
+    },
+    {
+        name: "Hiren Dave",
+        photo: "/HirenDave.jpg",
+        linkedin: "https://www.linkedin.com/in/davehiren/",
+        position: "Senior Principal Software Engineer at iBASEt",
+        about: "CTO, Product Manager, Entrepreneur, Tech Author, Blogger and Speaker with more than 11 years of industry experience."
+    },
+    {
+        name: "Paresh Mayani",
+        photo: "/PareshMayani.jpg",
+        linkedin: "https://www.linkedin.com/in/pareshmayani/",
+        position: "Founder & CEO at SolGuruz",
+        about: "Tech Innovator | Crafting Pixel-Perfect Software Solutions | Expert in Offshore Development Teams | Bespoke Software Development Specialist | Organizer, Google Developers Group Ahmedabad"
+    },
+    {
+        name: "Abhinav Raj",
+        photo: "/AbhinavRaj.jpg",
+        linkedin: "https://www.linkedin.com/in/abhinav-raj-234497159/",
+        position: "Senior Software Engineer at Headout ",
+        about: "Experienced Developer with a demonstrated history of working in the information technology and services industry."
+    },
+    {
+        name: "Jaydip Parikh",
+        photo: "/JaydipParikh.jpg",
+        linkedin: "https://www.linkedin.com/in/jaydipparikh/",
+        position: "Founder at Tej SolPro",
+        about: "Jaydip Parikh is a Digital Marketing Expert with over 20 years of experience in SEO, B2B Marketing, Digital Lead Generation, eCommerce, SaaS Marketing and other aspects."
+    },
+    {
+        name: "Ashish Patel",
+        photo: "/AshishPatel.jpg",
+        linkedin: "https://www.linkedin.com/in/ashishpatel2604",
+        position: "Senior AWS AI/ML Solution Architect at IBM",
+        about: "Ashish has over 12+ years, Author, Data Scientist and Researcher with 8+ Years of Experience of Data Science technology and Research experience in wide functions including predictive modelling, data preprocessing, feature engineering, machine learning and deep learning."
+    },
+    {
+        name: "Vrijraj Singh",
+        photo: "/VrijrajSingh.jpg",
+        linkedin: "https://www.linkedin.com/in/vrijraj/",
+        position: "GDE Firebase",
+        about: "Vrijraj is a community champion by passion. He was an organizer for GDG Jalandhar for 7 years. He is a Google Developers Expert for Firebase and Web Technologies."
+    },
+    {
+        name: "Jaydip Biniwale",
+        photo: "/JaydipBiniwale.jpg",
+        linkedin: "https://www.linkedin.com/in/biniwale/",
+        position: "Sr. Software Engineer - AI, TrackWizz",
+        about: "NVIDIA Certified AI Engineer | IIM-A | Sr. Software Engineer- AI | TrackWizz | Data Scientist | Python | Ex-CTO at Downtown | Generative AI | Computer Vision | NLP | Pytorch"
+    },
+    {
+        name: "Harsh Shah",
+        photo: "/HarshShah.jpg",
+        linkedin: "https://www.linkedin.com/in/harshcrop/",
+        position: "CTO at Pedals Up",
+        about: "Harsh Shah is a self-taught developer and the CTO at Pedals Up. With a passion for technology and a curiosity that knows no bounds, he has mastered various programming languages, including C, C++, HTML, CSS, JavaScript, Python, and SQL."
+    },
+    {
+        name: "Piyush Raj",
+        photo: "/PiyushRaj.jpg",
+        linkedin: "https://in.linkedin.com/in/piyushella",
+        position: "Founder, CEO at Vedilink",
+        about: "Product designer and programmer who enjoys solving real-life problems. Currently building a haven for students trying to improve our education system a little."
+    },
+    {
+        name: "Anirudh Khurana",
+        photo: "/AnirudhK.jpg",
+        linkedin: "https://www.linkedin.com/in/anirudh-khurana",
+        position: "Founder at Code and Debug",
+        about: "Founder at Code and Debug | Full Stack Developer | DSA Trainer | Educator with a Mission"
+    },
+    {
+        name: "Kartik Derasari",
+        photo: "/KartikD.jpg",
+        linkedin: "https://www.linkedin.com/in/kartikderasari/",
+        position: "Engineering Lead at Persistent Systems | Google Developer Expert",
+        about: "Kartik Derasari is a highly skilled and passionate Solutions Engineer and a Developer Advocate with a proven track record of success in designing and implementing innovative technology solutions."
+    },
+    {
+        name: "Amit Chopra",
+        photo: "/AmitChopra.jpg",
+        linkedin: "https://www.linkedin.com/in/amitchopra/",
+        position: "Product Management Consultant (Ex-Microsoft, Ex-Amazon, Ex-Google, Ex-Meta)",
+        about: "Amit is a technology enthusiast who thrives on exploring the latest advancements. As an engaging speaker, he captivate audiences with his passion, expertise, and ability to translate complex concepts into compelling narratives."
+    }
+]
+
 export default function DevolutionLanding() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -246,7 +359,7 @@ export default function DevolutionLanding() {
                         className="text-base md:text-2xl mb-8 myfont font-normal bold"
                     />
                 </section>
-                <PCWindow title="About Dev-o-lution" className="mb-32">
+                <PCWindow2 title="About Dev-o-lution" className="mb-32">
                     <p id="about" className="text-base lg:text-lg mb-4">
                         Dev-o-lution is where coding meets creativity, and innovation breaks
                         free from convention. Join us for workshops, talks, and
@@ -261,11 +374,25 @@ export default function DevolutionLanding() {
                         ].map(({ icon: Icon, text }, index) => (
                             <AnimatedBox
                                 key={index}
-                                className="flex items-center space-x-2 bg-[#ff6b6b] p-2 border-2 border-[#1a1a1a]">
+                                className="flex items-center space-x-2 bg-[#4ecdc4] p-2 border-2 border-[#1a1a1a]">
                                 <Icon className="text-[#1a1a1a]" />
                                 <span>{text}</span>
                             </AnimatedBox>
                         ))}
+                    </div>
+                </PCWindow2>
+                <PCWindow title="Our Speakers" className="mb-16">
+                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
+                        {speakers.map((speaker, index) => (
+                            <SpeakerCard key={index} {...speaker} />
+                        ))}
+                    </div>
+                    <div className="text-center mt-8">
+                        <TypeAnimation
+                            sequence={["Stay tuned for more speakers!"]}
+                            style={{ display: "inline-block" }}
+                            className="text-base md:text-2xl myfont font-normal bold"
+                        />
                     </div>
                 </PCWindow>
                 <PCWindow2 title="Event Timeline" className="mb-32">
