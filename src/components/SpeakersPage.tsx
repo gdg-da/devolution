@@ -88,7 +88,7 @@ const speakers: SpeakerProps[] = [
         name: "Jaydip Biniwale",
         photo: "/JaydipBiniwale.jpg",
         linkedin: "https://www.linkedin.com/in/biniwale/",
-        position: "Co-Founder & CTO at Downtown club",
+        position: "Sr. Software Engineer - AI, TrackWizz",
         about: "NVIDIA Certified AI Engineer | IIM-A | Sr. Software Engineer- AI | TrackWizz | Data Scientist | Python | Ex-CTO at Downtown | Generative AI | Computer Vision | NLP | Pytorch"
     },
     {
@@ -121,9 +121,9 @@ const speakers: SpeakerProps[] = [
     },
     {
         name: "Amit Chopra",
-        photo: "/AmitC.jpg",
+        photo: "/AmitChopra.jpg",
         linkedin: "https://www.linkedin.com/in/amitchopra/",
-        position: "Principal Technical Program Manager at Ex-Amazon",
+        position: "Product Management Consultant (Ex-Microsoft, Ex-Amazon, Ex-Google, Ex-Meta)",
         about: "Amit is a technology enthusiast who thrives on exploring the latest advancements. As an engaging speaker, he captivate audiences with his passion, expertise, and ability to translate complex concepts into compelling narratives."
     }
 ]
