@@ -8,10 +8,10 @@ interface BannerProps {
 }
 
 const BannerCard: React.FC<BannerProps> = ({ name, photo }) => (
-    <div className="bg-[#ff6b6b] p-3 border-4 border-[#1a1a1a] shadow-neo-banner">
+    <div className="bg-[#ff6b6b] p-3 border-[3px] border-[#1a1a1a] shadow-neo-banner">
         <div className="flex flex-col">
-            <Image src={photo} alt={name} width={1500} height={1500} className="mx-auto w-40 lg:w-52 rounded-md border-4 border-[#1a1a1a] mb-4" />
-            <h3 className="text-lg text-center font-bold mb-2">{name}</h3>
+            <Image src={photo} alt={name} width={1500} height={1500} className="mx-auto rounded-md border-[3px] border-[#1a1a1a] mb-2" />
+            <h3 className="text-lg text-center font-bold">{name}</h3>
         </div>
     </div>
 )
@@ -80,8 +80,7 @@ export default function Banner() {
         <div className="flex flex-col items-center justify-center min-h-screen bg-[#f5e6d3] font-mono text-[#1a1a1a] overflow-x-hidden scroll-smooth">
             <div className="zigzag-bg fixed inset-0 z-0 opacity-20 pointer-events-none"></div>
             <main className="container mx-auto px-4 relative z-10 lg:px-16">
-                <h1 className="text-4xl font-bold text-center mb-10 retro-text">Dev-o-lution Speakers</h1>
-                <div className="bg-[#4ecdc4] p-4 border-4 border-[#1a1a1a] shadow-neo-banner">
+                <div className="bg-[#4ecdc4] p-4 border-[3px] border-[#1a1a1a] shadow-neo-banner">
                     <div className="grid grid-cols-2 lg:grid-cols-7 gap-2">
                         {speakers.map((speaker, index) => (
                             <BannerCard key={index} {...speaker} />
