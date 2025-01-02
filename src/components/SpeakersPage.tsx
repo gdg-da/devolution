@@ -125,6 +125,13 @@ const speakers: SpeakerProps[] = [
         linkedin: "https://www.linkedin.com/in/amitchopra/",
         position: "Product Management Consultant (Ex-Microsoft, Ex-Amazon, Ex-Google, Ex-Meta)",
         about: "Amit is a technology enthusiast who thrives on exploring the latest advancements. As an engaging speaker, he captivate audiences with his passion, expertise, and ability to translate complex concepts into compelling narratives."
+    },
+    {
+        name: "Harsh Manvar",
+        photo: "/HarshM.jpg",
+        linkedin: "https://www.linkedin.com/in/harsh-manvar-64a30aa3/",
+        position: "GDE, Docker Captain, CNCF Ambassador",
+        about: "Harsh is Seasoned Senior Software Engineer at Oracle. With over half decade of experience in the tech industry as Software & DevOps Engineer."
     }
 ]
 

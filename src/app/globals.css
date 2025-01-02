@@ -42,6 +42,10 @@ body {
     box-shadow: 4px 4px 0px rgba(26, 26, 26, 1);
 }
 
+.shadow-neo-banner {
+    box-shadow: 2px 2px 0px rgba(26, 26, 26, 1);
+}
+
 .zigzag-bg {
     background:
         linear-gradient(135deg, #f5e6d3 25%, transparent 25%) -50px 0,
