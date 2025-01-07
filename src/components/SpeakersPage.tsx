@@ -132,6 +132,20 @@ const speakers: SpeakerProps[] = [
         linkedin: "https://www.linkedin.com/in/harsh-manvar-64a30aa3/",
         position: "GDE, Docker Captain, CNCF Ambassador",
         about: "Harsh is Seasoned Senior Software Engineer at Oracle. With over half decade of experience in the tech industry as Software & DevOps Engineer."
+    },
+    {
+        name: "Shubham Pachori",
+        photo: "/ShubhamP.jpg",
+        linkedin: "https://www.linkedin.com/in/shubham-pachori-b5703a86/",
+        position: "Head of Product & Founding Member at Shipmnts",
+        about: "Passionate about building products that solve real-world complex problems in the most simplified and user-centric way. Have successfully built, launched, and monetized over 5 enterprise B2B SaaS products in the domain of supply chain and fintech"
+    },
+    {
+        name: "Saurabh Mishra",
+        photo: "/Saurabh.jpg",
+        linkedin: "https://www.linkedin.com/in/connectsaurabhmishra/",
+        position: "DevOps Lead at TSYS | GDE Cloud",
+        about: "IT Professional with 13 years + experience in DevOps, Cloud Infrastructure Architect, Automation and System Engineering."
     }
 ]
 
@@ -168,13 +182,6 @@ export default function SpeakersPage() {
                         {speakers.map((speaker, index) => (
                             <SpeakerCard key={index} {...speaker} />
                         ))}
-                    </div>
-                    <div className="text-center mt-8">
-                        <TypeAnimation
-                            sequence={["Stay tuned for more speakers!"]}
-                            style={{ display: "inline-block" }}
-                            className="text-base md:text-2xl myfont font-normal bold"
-                        />
                     </div>
                 </PCWindow>
             </main>

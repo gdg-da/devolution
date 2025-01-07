@@ -34,9 +34,7 @@ import SpaceButton from "./ui/spacebutton";
 interface SpeakerProps {
     name: string;
     photo: string;
-    linkedin: string;
     position: string;
-    about: string;
 }
 
 const SpeakerCard: React.FC<SpeakerProps> = ({ name, photo, position }) => (
@@ -53,101 +51,78 @@ const speakers: SpeakerProps[] = [
     {
         name: "Rohan Hundia",
         photo: "/RohanHundia.jpg",
-        linkedin: "https://www.linkedin.com/in/rohan-hundia-38a94692/",
         position: "CEO at Unada Labs",
-        about: "Rohan is the Co-Founder and CEO of Unada Labs. As tech entrepreneur driving Unada Labs and as a serial entrepreneur, Rohan and team are poised to transform three major industries - real estate, finance and healthcare with disruptive tech."
     },
     {
         name: "Hiren Dave",
         photo: "/HirenDave.jpg",
-        linkedin: "https://www.linkedin.com/in/davehiren/",
         position: "Senior Principal Software Engineer at iBASEt",
-        about: "CTO, Product Manager, Entrepreneur, Tech Author, Blogger and Speaker with more than 11 years of industry experience."
     },
     {
         name: "Paresh Mayani",
         photo: "/PareshMayani.jpg",
-        linkedin: "https://www.linkedin.com/in/pareshmayani/",
         position: "Founder & CEO at SolGuruz",
-        about: "Tech Innovator | Crafting Pixel-Perfect Software Solutions | Expert in Offshore Development Teams | Bespoke Software Development Specialist | Organizer, Google Developers Group Ahmedabad"
     },
     {
         name: "Abhinav Raj",
         photo: "/AbhinavRaj.jpg",
-        linkedin: "https://www.linkedin.com/in/abhinav-raj-234497159/",
         position: "Senior Software Engineer at Headout ",
-        about: "Experienced Developer with a demonstrated history of working in the information technology and services industry."
     },
     {
         name: "Jaydip Parikh",
         photo: "/JaydipParikh.jpg",
-        linkedin: "https://www.linkedin.com/in/jaydipparikh/",
         position: "Founder at Tej SolPro",
-        about: "Jaydip Parikh is a Digital Marketing Expert with over 20 years of experience in SEO, B2B Marketing, Digital Lead Generation, eCommerce, SaaS Marketing and other aspects."
     },
     {
         name: "Ashish Patel",
         photo: "/AshishPatel.jpg",
-        linkedin: "https://www.linkedin.com/in/ashishpatel2604",
         position: "Senior AWS AI/ML Solution Architect at IBM",
-        about: "Ashish has over 12+ years, Author, Data Scientist and Researcher with 8+ Years of Experience of Data Science technology and Research experience in wide functions including predictive modelling, data preprocessing, feature engineering, machine learning and deep learning."
     },
     {
         name: "Vrijraj Singh",
         photo: "/VrijrajSingh.jpg",
-        linkedin: "https://www.linkedin.com/in/vrijraj/",
         position: "GDE Firebase",
-        about: "Vrijraj is a community champion by passion. He was an organizer for GDG Jalandhar for 7 years. He is a Google Developers Expert for Firebase and Web Technologies."
     },
     {
         name: "Jaydip Biniwale",
         photo: "/JaydipBiniwale.jpg",
-        linkedin: "https://www.linkedin.com/in/biniwale/",
         position: "Sr. Software Engineer - AI, TrackWizz",
-        about: "NVIDIA Certified AI Engineer | IIM-A | Sr. Software Engineer- AI | TrackWizz | Data Scientist | Python | Ex-CTO at Downtown | Generative AI | Computer Vision | NLP | Pytorch"
     },
     {
         name: "Harsh Shah",
         photo: "/HarshShah.jpg",
-        linkedin: "https://www.linkedin.com/in/harshcrop/",
         position: "CTO at Pedals Up",
-        about: "Harsh Shah is a self-taught developer and the CTO at Pedals Up. With a passion for technology and a curiosity that knows no bounds, he has mastered various programming languages, including C, C++, HTML, CSS, JavaScript, Python, and SQL."
     },
     {
         name: "Piyush Raj",
         photo: "/PiyushRaj.jpg",
-        linkedin: "https://in.linkedin.com/in/piyushella",
         position: "Founder, CEO at Vedilink",
-        about: "Product designer and programmer who enjoys solving real-life problems. Currently building a haven for students trying to improve our education system a little."
     },
     {
         name: "Anirudh Khurana",
         photo: "/AnirudhK.jpg",
-        linkedin: "https://www.linkedin.com/in/anirudh-khurana",
         position: "Founder at Code and Debug",
-        about: "Founder at Code and Debug | Full Stack Developer | DSA Trainer | Educator with a Mission"
     },
     {
         name: "Kartik Derasari",
         photo: "/KartikD.jpg",
-        linkedin: "https://www.linkedin.com/in/kartikderasari/",
         position: "Engineering Lead at Persistent Systems | Google Developer Expert",
-        about: "Kartik Derasari is a highly skilled and passionate Solutions Engineer and a Developer Advocate with a proven track record of success in designing and implementing innovative technology solutions."
     },
     {
         name: "Amit Chopra",
         photo: "/AmitChopra.jpg",
-        linkedin: "https://www.linkedin.com/in/amitchopra/",
         position: "Product Management Consultant (Ex-Microsoft, Ex-Amazon, Ex-Google, Ex-Meta)",
-        about: "Amit is a technology enthusiast who thrives on exploring the latest advancements. As an engaging speaker, he captivate audiences with his passion, expertise, and ability to translate complex concepts into compelling narratives."
     },
     {
         name: "Harsh Manvar",
         photo: "/HarshM.jpg",
-        linkedin: "https://www.linkedin.com/in/harsh-manvar-64a30aa3/",
         position: "GDE, Docker Captain, CNCF Ambassador",
-        about: "Harsh is Seasoned Senior Software Engineer at Oracle. With over half decade of experience in the tech industry as Software & DevOps Engineer."
-    }
+    },
+    {
+        name: "Shubham Pachori",
+        photo: "/ShubhamP.jpg",
+        position: "Head of Product & Founding Member at Shipmnts",
+    },
 ]
 
 export default function DevolutionLanding() {
@@ -228,6 +203,7 @@ export default function DevolutionLanding() {
                     <div className="hidden md:flex space-x-4 md:text-sm lg:text-lg font-bold">
                         {[
                             "Timeline",
+                            "Community Partners",
                             "Tracks",
                             "FAQs",
                             "Contact",
@@ -273,6 +249,7 @@ export default function DevolutionLanding() {
                         {[
                             "Timeline",
                             "Tracks",
+                            "Community Partners",
                             "FAQs",
                             "Contact",
                         ].map((item) => (
@@ -393,13 +370,6 @@ export default function DevolutionLanding() {
                         {speakers.map((speaker, index) => (
                             <SpeakerCard key={index} {...speaker} />
                         ))}
-                    </div>
-                    <div className="text-center mt-8">
-                        <TypeAnimation
-                            sequence={["Stay tuned for more speakers!"]}
-                            style={{ display: "inline-block" }}
-                            className="text-base md:text-2xl myfont font-normal bold"
-                        />
                     </div>
                 </PCWindow>
                 <PCWindow2 title="Event Timeline" className="mb-32">
@@ -600,7 +570,11 @@ export default function DevolutionLanding() {
                         </Tabs>
                     </section>
                 </PCWindow>
-                <PCWindow2 title="Join the Conversation" className="mb-32">
+                <PCWindow2 title="Community Partners" className="mb-32">
+                    <p id="community partners">We are proud to announce our partnership with Infinity AI for Dev-o-lution as our Community Partner. Infinity Ai is an AI community that will help to grow in the AI Learning journey. This community provide new beginner in the AI field and then provide them learning support.</p>
+                    <Image src={"/InfiAI.png"} alt="Infinity AI" width={1000} height={1000} className="mx-auto w-11/12 lg:w-1/4 bg-[#4ecdc4] rounded-md border-2 border-[#1a1a1a] mt-4" />
+                </PCWindow2>
+                <PCWindow title="Join the Conversation" className="mb-32">
                     <div className="text-center">
                         <p className="text-2xl font-bold mb-4">
                             Use our hashtag and win prizes!
@@ -614,8 +588,8 @@ export default function DevolutionLanding() {
                             hashtag for a chance to win amazing prizes!
                         </p>
                     </div>
-                </PCWindow2>
-                <PCWindow title="Our Team" className="mb-32">
+                </PCWindow>
+                <PCWindow2 title="Our Team" className="mb-32">
                     <div id="team" className="grid grid-cols-1 md:grid-cols-4 gap-6">
                         <div className="space-y-4">
                             <h3 className="text-2xl font-bold mb-4">Core Team</h3>
@@ -658,8 +632,8 @@ export default function DevolutionLanding() {
                             </ul>
                         </div>
                     </div>
-                </PCWindow>
-                <PCWindow2 title="Partner with Us" className="mb-32">
+                </PCWindow2>
+                <PCWindow title="Partner with Us" className="mb-32">
                     <div id="sponsors">
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <Input
@@ -698,14 +672,14 @@ export default function DevolutionLanding() {
                                 required></textarea>
                             <Button
                                 type="submit"
-                                className="w-full bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] border-2 border-[#1a1a1a] transition-colors shadow-neo hover-lift">
+                                className="w-full bg-[#ff6b6b] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5e6d3] border-2 border-[#1a1a1a] transition-colors shadow-neo hover-lift">
                                 Submit Sponsor Proposal
                             </Button>
                         </form>
                     </div>
-                </PCWindow2>
+                </PCWindow>
                 <div id="faqs">
-                    <PCWindow title="Frequently Asked Questions" className="mb-32">
+                    <PCWindow2 title="Frequently Asked Questions" className="mb-32">
                         <div className="space-y-8">
                             {[
                                 {
@@ -727,15 +701,15 @@ export default function DevolutionLanding() {
                             ].map(({ q, a }, index) => (
                                 <AnimatedBox
                                     key={index}
-                                    className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a]">
+                                    className="bg-[#4ecdc4] p-4 border-2 border-[#1a1a1a]">
                                     <h3 className="text-xl font-bold mb-2 text-[#1a1a1a]">{q}</h3>
                                     <p>{a}</p>
                                 </AnimatedBox>
                             ))}
                         </div>
-                    </PCWindow>
+                    </PCWindow2>
                 </div>
-                <PCWindow2 title="Ready to Evolve?" className="mb-32">
+                <PCWindow title="Ready to Evolve?" className="mb-32">
                     <div className="text-center">
                         <p className="text-xl lg:text-3xl font-bold mb-4">
                             Registration for Dev-o-lution have started!
@@ -745,7 +719,7 @@ export default function DevolutionLanding() {
                         </p>
                         <Button
                             asChild
-                            className="bg-[#4ecdc4] text-[#1a1a1a] hover:bg-[#ff6b6b] text-lg px-8 py-6 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
+                            className="bg-[#ff6b6b] text-[#1a1a1a] text-lg px-8 py-6 rounded-none border-4 border-[#1a1a1a] transform hover:translate-x-2 hover:-translate-y-2 transition-transform shadow-neo">
                             <Link
                                 target="_blank"
                                 href="https://unstop.com/p/dev-o-lution-google-developer-group-on-campus-daiict-1285732"
@@ -755,15 +729,15 @@ export default function DevolutionLanding() {
                         </Button>
                         <p className="text-2xl font-bold pt-6">See you at the event!</p>
                     </div>
-                </PCWindow2>
-                <PCWindow title="Contact Us" className="mb-32">
+                </PCWindow>
+                <PCWindow2 title="Contact Us" className="mb-32">
                     <div id="contact" className="text-center">
                         <p className="text-xl mb-4">For any queries, please contact us:</p>
                         <p className="text-2xl font-bold">Abhishek Abbi: +91 7490070001</p>
                         <p className="text-2xl font-bold">Jash Shah: +91 7041180305</p>
                         <p className="text-2xl font-bold">Email: dsc@daiict.ac.in</p>
                     </div>
-                </PCWindow>
+                </PCWindow2>
             </main>
             <footer className="bg-gray-950 text-[#f5e6d3] py-8 z-20 relative">
                 <div className="container mx-auto">
