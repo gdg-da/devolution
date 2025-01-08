@@ -1,22 +1,31 @@
-import { ArrowRightFromLineIcon } from 'lucide-react';
-import Link from 'next/link';
-import React from 'react';
-import styled from 'styled-components';
+import { ArrowRightFromLineIcon } from "lucide-react";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
+import Image from "next/image";
 
 const SpaceStrip = () => {
   return (
     <StyledWrapper>
-        <Link href='https://unstop.com/p/dev-o-lution-google-developer-group-on-campus-daiict-1285732'>
-      <div className="strip">
-        <strong>Registrations are open now! </strong><ArrowRightFromLineIcon className='text-white h-4 shadow-md '/> 
-        <div id="container-stars">
-          <div id="stars" />
+      <Link href="https://unstop.com/p/dev-o-lution-google-developer-group-on-campus-daiict-1285732">
+        <div className="strip">
+          <Image
+            src="/chill-guy-no-bg.gif"
+            alt="chill-guy"
+            className="astronaut"
+            width={500}
+            height={500}
+          />
+          <strong>Registrations are open now! </strong>
+          <ArrowRightFromLineIcon className="text-white h-4 shadow-md" />
+          <div id="container-stars">
+            <div id="stars" />
+          </div>
+          <div id="glow">
+            <div className="circle" />
+            <div className="circle" />
+          </div>
         </div>
-        <div id="glow">
-          <div className="circle" />
-          <div className="circle" />
-        </div>
-      </div>
       </Link>
     </StyledWrapper>
   );
@@ -78,7 +87,7 @@ const StyledWrapper = styled.div`
   }
 
   #stars::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -10rem;
     left: -100rem;
@@ -93,7 +102,7 @@ const StyledWrapper = styled.div`
   }
 
   #stars::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -50%;
@@ -178,6 +187,30 @@ const StyledWrapper = styled.div`
     100% {
       transform: scale(0.75);
       box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+  .astronaut {
+    position: absolute;
+    left: -10%;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg) scaleY(-1);
+    width: 50px;
+    animation: moveAstronaut 10s linear infinite;
+  }
+
+  @keyframes moveAstronaut {
+    0% {
+      left: -10%;
+    }
+    100% {
+      left: 110%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .astronaut {
+      animation: moveAstronaut 4s linear infinite;
     }
   }
 `;
