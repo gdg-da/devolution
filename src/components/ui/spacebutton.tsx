@@ -11,6 +11,7 @@ const SpaceStrip = () => {
         <div className="strip">
           <Image
             src="/chill-guy-no-bg.gif"
+            unoptimized
             alt="chill-guy"
             className="astronaut"
             width={500}
