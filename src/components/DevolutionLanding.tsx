@@ -130,6 +130,11 @@ const speakers: SpeakerProps[] = [
     photo: "/ShubhamP.jpg",
     position: "Head of Product & Founding Member at Shipmnts",
   },
+  {
+    name: "Saurabh Mishra",
+    photo: "/Saurabh.png",
+    position: "Head of Product & Founding Member at Shipmnts",
+  },
 ];
 
 export default function DevolutionLanding() {
@@ -373,7 +378,7 @@ export default function DevolutionLanding() {
           </div>
         </PCWindow2>
         <PCWindow title="Our Speakers" className="mb-16">
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {speakers.map((speaker, index) => (
               <SpeakerCard key={index} {...speaker} />
             ))}
