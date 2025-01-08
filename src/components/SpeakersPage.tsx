@@ -142,7 +142,7 @@ const speakers: SpeakerProps[] = [
     },
     {
         name: "Saurabh Mishra",
-        photo: "/Saurabh.jpg",
+        photo: "/Saurabh.png",
         linkedin: "https://www.linkedin.com/in/connectsaurabhmishra/",
         position: "DevOps Lead at TSYS | GDE Cloud",
         about: "IT Professional with 13 years + experience in DevOps, Cloud Infrastructure Architect, Automation and System Engineering."
