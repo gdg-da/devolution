@@ -133,7 +133,7 @@ const speakers: SpeakerProps[] = [
   {
     name: "Saurabh Mishra",
     photo: "/Saurabh.png",
-    position: "Head of Product & Founding Member at Shipmnts",
+    position: "DevOps Lead at TSYS | GDE Cloud",
   },
 ];
 
