@@ -596,12 +596,12 @@ export default function DevolutionLanding() {
               />
             </div>
 
-            <div id="infinityAI">
+            <div id="metaintro">
               <Image
                 src={"/metaintro.png"}
                 alt="MetaIntro"
                 width={2000}
-                height={2000}
+                height={3000}
                 className="mx-auto p-10 w-11/12 lg:w-1/4 bg-[#4ecdc4] rounded-md border-2 border-[#1a1a1a] mt-4"
               />
             </div>
