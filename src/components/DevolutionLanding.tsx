@@ -605,6 +605,16 @@ export default function DevolutionLanding() {
                 className="mx-auto p-10 w-11/12 lg:w-1/4 bg-[#4ecdc4] rounded-md border-2 border-[#1a1a1a] mt-4"
               />
             </div>
+
+            <div id="thm">
+              <Image
+                src={"/THMlogo.png"}
+                alt="The Hackers Meetuo"
+                width={1000}
+                height={1000}
+                className="mx-auto p-10 w-full lg:w-1/4 bg-[#4ecdc4] rounded-md border-2 border-[#1a1a1a] mt-4"
+              />
+            </div>
           </div>
         </PCWindow2>
         <PCWindow title="Join the Conversation" className="mb-32">
