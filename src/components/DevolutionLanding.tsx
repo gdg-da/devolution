@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -136,6 +137,115 @@ const speakers: SpeakerProps[] = [
     position: "DevOps Lead at TSYS | GDE Cloud",
   },
 ];
+
+const trackData = {
+  track1: {
+    title: "Track 1",
+    subtitle: "AI/ML, Web Dev, Cloud, Start-up",
+    morning: [
+      {
+        time: "09:00 - 09:45",
+        speaker: "Jaydip Biniwale",
+        talkTitle: "Transformers & Beyond: The Evolution of GenAI",
+      },
+      {
+        time: "09:45 - 10:30",
+        speaker: "Kartik Derasari",
+        talkTitle:
+          "Building scalable and cost-effective GenAI applications on Google Cloud!",
+      },
+      {
+        time: "10:30 - 11:15",
+        speaker: "Rohan Hundia",
+        talkTitle: "Embryonic AI Agents in reshaping Enterprise AI",
+      },
+      {
+        time: "11:15 - 12:00",
+        speaker: "Jaydip Parikh",
+        talkTitle:
+          "Breaking Bad: An Entrepreneur's Guide to Losing It All (and More)",
+      },
+    ],
+    afternoon: [
+      {
+        time: "01:00 - 02:30",
+        speaker: "Vrijraj Singh",
+        talkTitle: "Web Ecosystem with Multimodality of Gemini",
+        isWorkshop: true,
+      },
+      {
+        time: "02:30 - 03:15",
+        speaker: "Harsh Manvar",
+        talkTitle: "Hybrid & Multi Cloud with Anthos",
+      },
+      {
+        time: "03:15 - 04:00",
+        speaker: "Ashish Patel",
+        talkTitle: "How to Design AI Agent for Any Domain?",
+      },
+      {
+        time: "04:00 - 04:45",
+        speaker: "Shubham Pachori",
+        talkTitle: "Demystifying how to traverse from 0 to 1",
+      },
+    ],
+  },
+  track2: {
+    title: "Track 2",
+    subtitle:
+      "Web3/Blockchain, Web/App Dev, Cloud, Cybersecurity, Start-up, DSA/CP",
+    morning: [
+      {
+        time: "09:00 - 09:45",
+        speaker: "Saurabh Mishra",
+        talkTitle:
+          "Harnessing Google Cloud for Real-Time Problem Solving through Observability",
+      },
+      {
+        time: "09:45 - 10:30",
+        speaker: "Harsh Shah",
+        talkTitle:
+          "Unlocking the Future: How Blockchain and Web3 are Shaping Tomorrow's World",
+      },
+      {
+        time: "10:30 - 11:15",
+        speaker: "Paresh Mayani",
+        talkTitle:
+          "From Developer to CEO: Insights and Lessons from My Entrepreneurial Journey",
+      },
+      {
+        time: "11:15 - 12:00",
+        speaker: "Amit Chopra",
+        talkTitle: "Product Mindset for Developers: Building Tech That Matters",
+      },
+    ],
+    afternoon: [
+      {
+        time: "01:00 - 02:30",
+        speaker: "Anirudh Khurana",
+        talkTitle: "DSA Masterclass: Advanced Problem-Solving Strategies",
+        isWorkshop: true,
+      },
+      {
+        time: "02:30 - 03:15",
+        speaker: "Hiren Dave",
+        talkTitle:
+          "Generative AI and Modern Web Development: From Figma to Code",
+      },
+      {
+        time: "03:15 - 04:00",
+        speaker: "Piyush Raj",
+        talkTitle:
+          "Cybersecurity 101: But it's 2025 (Navigating the modern threat landscape in record time)",
+      },
+      {
+        time: "04:00 - 04:45",
+        speaker: "Abhinav Raj",
+        talkTitle: "Domain Driven Design",
+      },
+    ],
+  },
+};
 
 export default function DevolutionLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -422,6 +532,156 @@ export default function DevolutionLanding() {
               </FloatingElement>
             ))}
           </div>
+          <section id="tracks-timeline" className="mt-8">
+            <Tabs defaultValue="track1" className="w-full">
+              <TabsList className="grid h-fit sm:h-10 w-full grid-cols-2 md:grid-cols-2 bg-[# ] p-2 border-4 border-[#1a1a1a] mb-4">
+                <TabsTrigger
+                  value="track1"
+                  className="data-[state=active]:bg-[#4ecdc4] bg-[#ff6b6b] border-2 border-[#1a1a1a] hover-lift">
+                  Track 1
+                </TabsTrigger>
+                <TabsTrigger
+                  value="track2"
+                  className="data-[state=active]:bg-[#4ecdc4] bg-[#ff6b6b] border-2 border-[#1a1a1a] hover-lift">
+                  Track 2
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent
+                value="track1"
+                className="bg-[#4ecdc4] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                <div className="flex flex-col space-y-4">
+                  <div className="flex flex-col md:flex-row items-center justify-between">
+                    <div className="w-full">
+                      <h3 className="text-2xl font-bold mb-4">
+                        {trackData.track1.title}
+                      </h3>
+                      <p className="mb-6 text-lg">
+                        {trackData.track1.subtitle}
+                      </p>
+                      <div className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a] mb-6">
+                        <h4 className="font-bold text-xl mb-4 flex items-center">
+                          <Calendar className="mr-2" />
+                          Morning Sessions
+                        </h4>
+                        {trackData.track1.morning.map((session, index) => (
+                          <div
+                            key={index}
+                            className="mb-4 p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
+                            <p className="font-bold text-lg">{session.time}</p>
+                            <p className="mt-1">
+                              <span className="font-semibold">
+                                {session.speaker}
+                              </span>
+                              <br />
+                              {session.talkTitle}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="text-center py-4 bg-[#ff6b6b] border-2 border-[#1a1a1a] mb-6">
+                        <span className="text-lg font-bold">
+                          Lunch Break (12:00 - 01:00)
+                        </span>
+                      </div>
+                      <div className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a] mb-6">
+                        <h4 className="font-bold text-xl mb-4 flex items-center">
+                          <Calendar className="mr-2" />
+                          Afternoon Sessions
+                        </h4>
+                        {trackData.track1.afternoon.map((session, index) => (
+                          <div
+                            key={index}
+                            className="mb-4 p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
+                            <p className="font-bold text-lg">{session.time}</p>
+                            <p className="mt-1">
+                              <span className="font-semibold">
+                                {session.speaker}
+                              </span>
+                              <br />
+                              {session.talkTitle}
+                              {session.isWorkshop && (
+                                <>
+                                  <br />
+                                  <span className="text-sm">(Workshop)</span>
+                                </>
+                              )}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </TabsContent>
+              <TabsContent
+                value="track2"
+                className="bg-[#4ecdc4] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
+                <div className="flex flex-col space-y-4">
+                  <div className="flex flex-col md:flex-row items-center justify-between">
+                    <div className="w-full">
+                      <h3 className="text-2xl font-bold mb-4">
+                        {trackData.track2.title}
+                      </h3>
+                      <p className="mb-6 text-lg">
+                        {trackData.track2.subtitle}
+                      </p>
+                      <div className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a] mb-6">
+                        <h4 className="font-bold text-xl mb-4 flex items-center">
+                          <Calendar className="mr-2" />
+                          Morning Sessions
+                        </h4>
+                        {trackData.track2.morning.map((session, index) => (
+                          <div
+                            key={index}
+                            className="mb-4 p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
+                            <p className="font-bold text-lg">{session.time}</p>
+                            <p className="mt-1">
+                              <span className="font-semibold">
+                                {session.speaker}
+                              </span>
+                              <br />
+                              {session.talkTitle}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="text-center py-4 bg-[#ff6b6b] border-2 border-[#1a1a1a] mb-6">
+                        <span className="text-lg font-bold">
+                          Lunch Break (12:00 - 01:00)
+                        </span>
+                      </div>
+                      <div className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a] mb-6">
+                        <h4 className="font-bold text-xl mb-4 flex items-center">
+                          <Calendar className="mr-2" />
+                          Afternoon Sessions
+                        </h4>
+                        {trackData.track2.afternoon.map((session, index) => (
+                          <div
+                            key={index}
+                            className="mb-4 p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
+                            <p className="font-bold text-lg">{session.time}</p>
+                            <p className="mt-1">
+                              <span className="font-semibold">
+                                {session.speaker}
+                              </span>
+                              <br />
+                              {session.talkTitle}
+                              {session.isWorkshop && (
+                                <>
+                                  <br />
+                                  <span className="text-sm">(Workshop)</span>
+                                </>
+                              )}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </TabsContent>
+            </Tabs>
+          </section>
         </PCWindow2>
         <PCWindow title="Dev-o-lution Tracks" className="mb-32">
           <section id="tracks">
