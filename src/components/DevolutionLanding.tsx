@@ -548,66 +548,86 @@ export default function DevolutionLanding() {
               </TabsList>
               <TabsContent
                 value="track1"
-                className="bg-[#4ecdc4] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                <div className="flex flex-col space-y-4">
-                  <div className="flex flex-col md:flex-row items-center justify-between">
+                className="bg-[#4ecdc4] p-3 sm:p-4 md:p-6 mt-2 sm:mt-3 md:mt-4 border-2 sm:border-3 md:border-4 border-[#1a1a1a] slide-in-animation">
+                <div className="flex flex-col space-y-2 sm:space-y-3 md:space-y-4">
+                  <div className="flex flex-col md:flex-row items-start justify-between">
                     <div className="w-full">
-                      <h3 className="text-2xl font-bold mb-4">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 md:mb-4">
                         {trackData.track1.title}
                       </h3>
-                      <p className="mb-6 text-lg">
+                      <p className="mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base md:text-lg">
                         {trackData.track1.subtitle}
                       </p>
-                      <div className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a] mb-6">
-                        <h4 className="font-bold text-xl mb-4 flex items-center">
-                          <Calendar className="mr-2" />
+                      <div className="bg-[#ff6b6b] p-2 sm:p-3 md:p-4 border-2 border-[#1a1a1a] mb-3 sm:mb-4 md:mb-6">
+                        <h4 className="font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3 md:mb-4 flex items-center">
+                          <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                           Morning Sessions
                         </h4>
                         {trackData.track1.morning.map((session, index) => (
                           <div
                             key={index}
-                            className="mb-4 p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
-                            <p className="font-bold text-lg">{session.time}</p>
+                            className="mb-2 sm:mb-3 md:mb-4 p-2 sm:p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
+                            <p className="font-bold text-sm sm:text-base md:text-lg">
+                              {session.time}
+                            </p>
                             <p className="mt-1">
                               <span className="font-semibold">
                                 {session.speaker}
                               </span>
                               <br />
-                              {session.talkTitle}
+                              <span className="text-sm sm:text-base">
+                                {session.talkTitle}
+                              </span>
                             </p>
                           </div>
                         ))}
                       </div>
-                      <div className="text-center py-4 bg-[#ff6b6b] border-2 border-[#1a1a1a] mb-6">
-                        <span className="text-lg font-bold">
+                      <div className="text-center py-2 sm:py-3 md:py-4 bg-[#ff6b6b] border-2 border-[#1a1a1a] mb-3 sm:mb-4 md:mb-6">
+                        <span className="text-sm sm:text-base md:text-lg font-bold">
                           Lunch Break (12:00 - 01:00)
                         </span>
                       </div>
-                      <div className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a] mb-6">
-                        <h4 className="font-bold text-xl mb-4 flex items-center">
-                          <Calendar className="mr-2" />
+                      <div className="bg-[#ff6b6b] p-2 sm:p-3 md:p-4 border-2 border-[#1a1a1a] mb-3 sm:mb-4 md:mb-6">
+                        <h4 className="font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3 md:mb-4 flex items-center">
+                          <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                           Afternoon Sessions
                         </h4>
                         {trackData.track1.afternoon.map((session, index) => (
                           <div
                             key={index}
-                            className="mb-4 p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
-                            <p className="font-bold text-lg">{session.time}</p>
+                            className="mb-2 sm:mb-3 md:mb-4 p-2 sm:p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
+                            <p className="font-bold text-sm sm:text-base md:text-lg">
+                              {session.time}
+                            </p>
                             <p className="mt-1">
                               <span className="font-semibold">
                                 {session.speaker}
                               </span>
                               <br />
-                              {session.talkTitle}
+                              <span className="text-sm sm:text-base">
+                                {session.talkTitle}
+                              </span>
                               {session.isWorkshop && (
                                 <>
                                   <br />
-                                  <span className="text-sm">(Workshop)</span>
+                                  <span className="text-xs sm:text-sm">
+                                    (Workshop)
+                                  </span>
                                 </>
                               )}
                             </p>
                           </div>
                         ))}
+                      </div>
+                      <div className="text-center py-2 sm:py-3 md:py-4 bg-[#ff6b6b] border-2 border-[#1a1a1a] mb-3 sm:mb-4 md:mb-6">
+                        <span className="text-sm sm:text-base md:text-lg font-bold">
+                          Closing Note (04:45 - 05:00)
+                        </span>
+                      </div>
+                      <div className="text-center py-2 sm:py-3 md:py-4 bg-[#ff6b6b] border-2 border-[#1a1a1a] mb-3 sm:mb-4 md:mb-6">
+                        <span className="text-sm sm:text-base md:text-lg font-bold">
+                          Networking (05:00 - 06:00)
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -615,66 +635,86 @@ export default function DevolutionLanding() {
               </TabsContent>
               <TabsContent
                 value="track2"
-                className="bg-[#4ecdc4] p-6 mt-4 border-4 border-[#1a1a1a] slide-in-animation">
-                <div className="flex flex-col space-y-4">
-                  <div className="flex flex-col md:flex-row items-center justify-between">
+                className="bg-[#4ecdc4] p-3 sm:p-4 md:p-6 mt-2 sm:mt-3 md:mt-4 border-2 sm:border-3 md:border-4 border-[#1a1a1a] slide-in-animation">
+                <div className="flex flex-col space-y-2 sm:space-y-3 md:space-y-4">
+                  <div className="flex flex-col md:flex-row items-start justify-between">
                     <div className="w-full">
-                      <h3 className="text-2xl font-bold mb-4">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 md:mb-4">
                         {trackData.track2.title}
                       </h3>
-                      <p className="mb-6 text-lg">
+                      <p className="mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base md:text-lg">
                         {trackData.track2.subtitle}
                       </p>
-                      <div className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a] mb-6">
-                        <h4 className="font-bold text-xl mb-4 flex items-center">
-                          <Calendar className="mr-2" />
+                      <div className="bg-[#ff6b6b] p-2 sm:p-3 md:p-4 border-2 border-[#1a1a1a] mb-3 sm:mb-4 md:mb-6">
+                        <h4 className="font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3 md:mb-4 flex items-center">
+                          <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                           Morning Sessions
                         </h4>
                         {trackData.track2.morning.map((session, index) => (
                           <div
                             key={index}
-                            className="mb-4 p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
-                            <p className="font-bold text-lg">{session.time}</p>
+                            className="mb-2 sm:mb-3 md:mb-4 p-2 sm:p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
+                            <p className="font-bold text-sm sm:text-base md:text-lg">
+                              {session.time}
+                            </p>
                             <p className="mt-1">
                               <span className="font-semibold">
                                 {session.speaker}
                               </span>
                               <br />
-                              {session.talkTitle}
+                              <span className="text-sm sm:text-base">
+                                {session.talkTitle}
+                              </span>
                             </p>
                           </div>
                         ))}
                       </div>
-                      <div className="text-center py-4 bg-[#ff6b6b] border-2 border-[#1a1a1a] mb-6">
-                        <span className="text-lg font-bold">
+                      <div className="text-center py-2 sm:py-3 md:py-4 bg-[#ff6b6b] border-2 border-[#1a1a1a] mb-3 sm:mb-4 md:mb-6">
+                        <span className="text-sm sm:text-base md:text-lg font-bold">
                           Lunch Break (12:00 - 01:00)
                         </span>
                       </div>
-                      <div className="bg-[#ff6b6b] p-4 border-2 border-[#1a1a1a] mb-6">
-                        <h4 className="font-bold text-xl mb-4 flex items-center">
-                          <Calendar className="mr-2" />
+                      <div className="bg-[#ff6b6b] p-2 sm:p-3 md:p-4 border-2 border-[#1a1a1a] mb-3 sm:mb-4 md:mb-6">
+                        <h4 className="font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3 md:mb-4 flex items-center">
+                          <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                           Afternoon Sessions
                         </h4>
                         {trackData.track2.afternoon.map((session, index) => (
                           <div
                             key={index}
-                            className="mb-4 p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
-                            <p className="font-bold text-lg">{session.time}</p>
+                            className="mb-2 sm:mb-3 md:mb-4 p-2 sm:p-3 bg-[#4ecdc4] border-2 border-[#1a1a1a] hover:translate-x-1 hover:-translate-y-1 transition-transform">
+                            <p className="font-bold text-sm sm:text-base md:text-lg">
+                              {session.time}
+                            </p>
                             <p className="mt-1">
                               <span className="font-semibold">
                                 {session.speaker}
                               </span>
                               <br />
-                              {session.talkTitle}
+                              <span className="text-sm sm:text-base">
+                                {session.talkTitle}
+                              </span>
                               {session.isWorkshop && (
                                 <>
                                   <br />
-                                  <span className="text-sm">(Workshop)</span>
+                                  <span className="text-xs sm:text-sm">
+                                    (Workshop)
+                                  </span>
                                 </>
                               )}
                             </p>
                           </div>
                         ))}
+                      </div>
+                      <div className="text-center py-2 sm:py-3 md:py-4 bg-[#ff6b6b] border-2 border-[#1a1a1a] mb-3 sm:mb-4 md:mb-6">
+                        <span className="text-sm sm:text-base md:text-lg font-bold">
+                          Closing Note (04:45 - 05:00)
+                        </span>
+                      </div>
+                      <div className="text-center py-2 sm:py-3 md:py-4 bg-[#ff6b6b] border-2 border-[#1a1a1a] mb-3 sm:mb-4 md:mb-6">
+                        <span className="text-sm sm:text-base md:text-lg font-bold">
+                          Networking (05:00 - 06:00)
+                        </span>
                       </div>
                     </div>
                   </div>
