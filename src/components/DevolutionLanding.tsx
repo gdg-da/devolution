@@ -571,7 +571,7 @@ export default function DevolutionLanding() {
                               {session.time}
                             </p>
                             <p className="mt-1">
-                              <span className="font-semibold">
+                              <span className="font-bold">
                                 {session.speaker}
                               </span>
                               <br />
@@ -600,7 +600,7 @@ export default function DevolutionLanding() {
                               {session.time}
                             </p>
                             <p className="mt-1">
-                              <span className="font-semibold">
+                              <span className="font-bold">
                                 {session.speaker}
                               </span>
                               <br />
@@ -658,7 +658,7 @@ export default function DevolutionLanding() {
                               {session.time}
                             </p>
                             <p className="mt-1">
-                              <span className="font-semibold">
+                              <span className="font-bold">
                                 {session.speaker}
                               </span>
                               <br />
@@ -687,7 +687,7 @@ export default function DevolutionLanding() {
                               {session.time}
                             </p>
                             <p className="mt-1">
-                              <span className="font-semibold">
+                              <span className="font-bold">
                                 {session.speaker}
                               </span>
                               <br />
