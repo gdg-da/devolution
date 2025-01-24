@@ -17,7 +17,7 @@ const SpaceStrip = () => {
             width={500}
             height={500}
           />
-          <strong>Registrations are open now! </strong>
+          <strong>Registrations are closed! </strong>
           <ArrowRightFromLineIcon className="text-white h-4 shadow-md" />
           <div id="container-stars">
             <div id="stars" />
